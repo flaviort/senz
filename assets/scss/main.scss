@@ -104,19 +104,6 @@ textarea {
     font-display: swap;
 }
 
-
-.my-page-enter-active,
-.my-page-leave-active {
-    transition: .3s;
-}
-
-.my-page-enter,
-.my-page-leave-to {
-    opacity: 0;
-    transform: translateY(50px);
-}
-
-
 body {
     background-color: $black;
     font-family: $plain;

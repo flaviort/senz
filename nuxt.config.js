@@ -94,8 +94,35 @@ export default {
 	},
 
 	// Specify a transition to use on all pages
+	/*
 	pageTransition: {
-		name: 'my-page',
+		name: 'page',
 		mode: 'out-in',
-	},
+		css: false,
+	
+		beforeEnter(el) {
+			this.$gsap.set(el, {
+				opacity: 0
+			})
+		},
+	
+		enter(el, done) {
+			this.$gsap.to(el, {
+				opacity: 1,
+				duration: 0.5,
+				ease: 'power2.inOut',
+				onComplete: done
+			})
+		},
+	
+		leave(el, done) {
+			this.$gsap.to(el, {
+				opacity: 0,
+				duration: 0.5,
+				ease: 'power2.inOut',
+				onComplete: done
+			})
+		}
+	}
+	*/
 }

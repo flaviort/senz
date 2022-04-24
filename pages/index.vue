@@ -23,7 +23,7 @@
 					Whether you're a startup or a growing company, we provide everything you need to reach your clients.
 				</p>
 
-				<NuxtLink :to="{ name: 'Services'}" class="inline-block px-10 py-4 transition-all duration-300 border border-white rounded-full hover:bg-white hover:text-black">
+				<NuxtLink :to="{ name: 'About'}" class="inline-block px-10 py-4 transition-all duration-300 border border-white rounded-full hover:bg-white hover:text-black">
 					Our services
 				</NuxtLink>
 
@@ -160,13 +160,6 @@
 			}
 		},
 
-		mounted() {
-			this.animateOnScroll()
-			this.bgColor()
-			this.projectImagesScroll01()
-			this.projectImagesScroll02()
-		},
-
 		methods: {
 			animateOnScroll() {
       			this.$gsap.to('.projects .project-image', {
@@ -181,13 +174,14 @@
     		},
 
 			bgColor() {
-				this.$gsap.to('body', {
+				let tween = this.$gsap.to('body', {
 					backgroundColor: '#fff',
 					scrollTrigger: {
           				trigger: '.projects-title',
 						start: vh(-10) + 'top',
     					end: vh(20) + 'bottom',
           				scrub: true,
+						clearProps: 'all',
         			}
 				})
 			},
@@ -216,6 +210,31 @@
         			}
 				})
 			},
+		},
+
+		mounted() {
+			this.$ScrollTrigger.refresh()
+			this.$ScrollTrigger.enable()
+
+			setTimeout(() => {
+				this.$gsap.to('body', {
+					clearProps: 'all',
+				})
+				this.animateOnScroll()	
+				this.projectImagesScroll01()
+				this.projectImagesScroll02()
+				this.bgColor()
+			}, 10)
+		},
+
+		beforeRouteLeave(from, to, next) {
+			setTimeout(() => {
+				this.$gsap.to('body', {
+					clearProps: 'all',
+				})
+				this.$ScrollTrigger.disable()
+			}, 200)
+			next();
 		},
 	}
 </script>

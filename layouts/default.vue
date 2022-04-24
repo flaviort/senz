@@ -19,8 +19,7 @@
 
 <script>
 	export default {
-		// set the name of the transition you want to use
-		layoutTransition: 'my-layouts'
+		
 	}
 </script>
 
