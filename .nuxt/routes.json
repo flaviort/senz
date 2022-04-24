@@ -1,0 +1,46 @@
+[
+  {
+    "name": "About",
+    "path": "/about",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_0bea9cba"
+  },
+  {
+    "name": "Contact",
+    "path": "/contact",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_8399aae6"
+  },
+  {
+    "name": "Projects",
+    "path": "/projects",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/projects.vue",
+    "chunkName": "pages/projects",
+    "children": [
+      {
+        "name": "LP Fitness",
+        "path": "lp-fitness",
+        "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/projects/lp-fitness.vue",
+        "chunkName": "pages/projects/lp-fitness",
+        "_name": "_000adf7e"
+      }
+    ],
+    "_name": "_1099d646"
+  },
+  {
+    "name": "Services",
+    "path": "/services",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/services.vue",
+    "chunkName": "pages/services",
+    "_name": "_55af0a7e"
+  },
+  {
+    "name": "Home",
+    "path": "/",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2ba2777f"
+  }
+]
