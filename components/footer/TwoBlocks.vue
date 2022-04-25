@@ -5,7 +5,7 @@
 			<div class="relative w-full border-b border-solid border-zinc-800 py-14 md:py-40 md:w-1/2 md:static md:border-0">
 				
 				<NuxtLink :to="{ name: 'Projects'}" class="absolute overflow-hidden top-0 left-0 w-screen md:w-[50vw] h-full z-0 hover:bg-black transition-all duration-300 -ml-6 md:ml-0 group">
-					<span :style="{ backgroundImage: `url(${projectsBg})` }" class="absolute top-0 left-0 block w-full h-full transition-all duration-1000 opacity-0 group-hover:opacity-20 group-hover:scale-110"></span>
+					<span :style="{ backgroundImage: `url(${projectsBg})` }" class="absolute top-0 left-0 block w-full h-full transition-all duration-1000 opacity-0 group-hover:opacity-20 group-hover:scale-110 will-change-transform"></span>
 				</NuxtLink>
 
 				<h3 class="relative text-2xl font-bold text-white pointer-events-none z-2">
@@ -25,7 +25,7 @@
 			<div class="relative w-full py-14 md:py-40 md:w-1/2 md:static">
 				
 				<NuxtLink :to="{ name: 'Services' }" class="absolute overflow-hidden top-0 right-0 w-screen md:w-[50vw] h-full z-0 hover:bg-black transition-all duration-1000 -mr-6 md:mr-0 group">
-					<span :style="{ backgroundImage: `url(${servicesBg})` }" class="absolute top-0 left-0 block w-full h-full transition-all duration-1000 opacity-0 group-hover:opacity-20 group-hover:scale-110"></span>
+					<span :style="{ backgroundImage: `url(${servicesBg})` }" class="absolute top-0 left-0 block w-full h-full transition-all duration-1000 opacity-0 group-hover:opacity-20 group-hover:scale-110 will-change-transform"></span>
 				</NuxtLink>
 
 				<h3 class="relative text-2xl font-bold text-white pointer-events-none z-2">

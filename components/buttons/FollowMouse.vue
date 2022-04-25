@@ -53,7 +53,7 @@
 				};
 
 				for (let i = 0; i < links.length; i++) {
-					links[i].addEventListener('mouseout', function(){
+					links[i].addEventListener('mouseleave', function(){
 						circleSpan.classList.remove('!w-[150px]', '!h-[150px]');
 						circleSpanSvg.classList.remove('!text-transparent');
 					});
@@ -68,7 +68,7 @@
 				};
 
 				for (let i = 0; i < projectLink.length; i++) {
-					projectLink[i].addEventListener('mouseout', function(){
+					projectLink[i].addEventListener('mouseleave', function(){
 						circleSpan.classList.remove('!w-[150px]', '!h-[150px]');
 						circleSpanSvg.classList.remove('!text-blue-600');
 						circleSpanText.classList.remove('opacity-100', '!rotate-0', '!scale-100');

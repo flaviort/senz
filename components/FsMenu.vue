@@ -12,8 +12,8 @@
 
 						<nav>
 							<ul>
-								<li class="mb-5 text-4xl font-bold text-black md:mb-7 md:text-5xl" v-for="(item, i) in menu" :key="i">
-									<NuxtLink :to="{name:item.link}" class="transition-all duration-300">{{ item.name }}</NuxtLink>
+								<li class="mb-5 text-4xl font-bold text-black menu-link md:mb-7 md:text-5xl" v-for="(item, i) in menu" :key="i" @click="toggle">
+									<NuxtLink :to="{name:item.link}" class="transition-all duration-300" ref="menu">{{ item.name }}</NuxtLink>
 								</li>
 							</ul>
 						</nav>
@@ -65,11 +65,25 @@
 			}
 		},
 
-		mounted() {
-			var _this = this;
+		methods: {
+			toggle() {
+				this.isOpen = !this.isOpen;
+				this.$parent.$emit('isActive')
+				this.$setBodyClass()
+			},
 
-			this.$root.$on('isOpen', function(){
-				_this.isOpen = !_this.isOpen;
+			animateMenuItem() {
+				//const menuLink = this.$refs.menu;
+				//let hover = this.$gsap.to(menuLink, { autoAlpha: 0 });
+				//menuLink.addEventListener("mouseenter", () => hover.play());
+			},
+		},
+
+		mounted() {
+			//this.animateMenuItem()
+			var that = this;
+			this.$parent.$on('isOpen', function(){
+				that.isOpen = !that.isOpen;
 			});
 		}
 	}

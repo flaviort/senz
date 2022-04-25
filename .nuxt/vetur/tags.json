@@ -5,11 +5,11 @@
   "SideMenu": {
     "description": "Auto imported from components/SideMenu.vue"
   },
-  "Footer": {
-    "description": "Auto imported from components/footer/Footer.vue"
+  "LogosSenzHorizontal": {
+    "description": "Auto imported from components/logos/SenzHorizontal.vue"
   },
-  "FooterTwoBlocks": {
-    "description": "Auto imported from components/footer/TwoBlocks.vue"
+  "LogosSenzVertical": {
+    "description": "Auto imported from components/logos/SenzVertical.vue"
   },
   "ButtonsArrowDown": {
     "description": "Auto imported from components/buttons/ArrowDown.vue"
@@ -20,10 +20,10 @@
   "ButtonsFollowMouse": {
     "description": "Auto imported from components/buttons/FollowMouse.vue"
   },
-  "LogosSenzHorizontal": {
-    "description": "Auto imported from components/logos/SenzHorizontal.vue"
+  "Footer": {
+    "description": "Auto imported from components/footer/Footer.vue"
   },
-  "LogosSenzVertical": {
-    "description": "Auto imported from components/logos/SenzVertical.vue"
+  "FooterTwoBlocks": {
+    "description": "Auto imported from components/footer/TwoBlocks.vue"
   }
 }

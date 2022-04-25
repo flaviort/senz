@@ -18,15 +18,6 @@
     "path": "/projects",
     "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/projects.vue",
     "chunkName": "pages/projects",
-    "children": [
-      {
-        "name": "LP Fitness",
-        "path": "lp-fitness",
-        "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/projects/lp-fitness.vue",
-        "chunkName": "pages/projects/lp-fitness",
-        "_name": "_000adf7e"
-      }
-    ],
     "_name": "_1099d646"
   },
   {
@@ -42,5 +33,12 @@
     "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_2ba2777f"
+  },
+  {
+    "name": "LP Fitness",
+    "path": "/:projects/lp-fitness",
+    "component": "/Applications/XAMPP/xamppfiles/htdocs/clients/senz/pages/_projects/lp-fitness.vue",
+    "chunkName": "pages/_projects/lp-fitness",
+    "_name": "_d140f210"
   }
 ]

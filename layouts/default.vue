@@ -4,7 +4,9 @@
 		<FsMenu />
 		<SideMenu />
 		
-		<div class="transition-all duration-300 body-wrapper will-change-auto">
+		<div class="body-wrapper">
+
+			<div class="fixed top-0 left-0 z-20 block w-full h-full transition-all duration-300 bg-black pointer-events-none overlay opacity-0 will-change-[opacity]"></div>
 
 			<Nuxt class="relative main-container" />
 

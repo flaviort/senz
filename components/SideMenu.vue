@@ -9,9 +9,9 @@
 			</NuxtLink>
 
 			<button class="fixed inline-block w-8 p-0 cursor-pointer top-4 md:-top-auto right-6 md:right-auto md:relative md:-translate-y-20 small:-translate-y-10 md:mx-auto open-fs-menu group" :class="{ active: isActive }" @click="toggle">
-				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 rounded will-change-auto transition-all duration-300"></span>
-				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-100 rounded will-change-auto transition-all duration-300"></span>
-				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-200 rounded will-change-auto transition-all duration-300"></span>
+				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 rounded will-change-transform transition-all duration-300"></span>
+				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-100 rounded will-change-transform transition-all duration-300"></span>
+				<span class="relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-200 rounded will-change-transform transition-all duration-300"></span>
 			</button>
 
 			<a href="mailto:hello@senzdsn.com" class="hidden w-0 mb-5 transition-all duration-300 -rotate-90 small:hidden text-zinc-400 md:inline-block hover:text-white">hello@senzdsn.com</a>
@@ -32,15 +32,17 @@
 		methods: {
 			toggle() {
 				this.isActive = !this.isActive;
-				this.$root.$emit('isOpen')
-				this.setBodyClass()
+				this.$parent.$emit('isOpen')
+				this.$setBodyClass()
 			},
-			
-			setBodyClass() {
-				let body = document.body
-				body.classList.toggle('no-scroll')
-  			}
 		},
+
+		mounted() {
+			var that = this;
+			this.$parent.$on('isActive', function(){
+				that.isActive = !that.isActive;
+			});
+		}
 	}
 </script>
 

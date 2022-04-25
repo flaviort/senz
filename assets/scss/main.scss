@@ -168,15 +168,19 @@ body {
 .z-8 { z-index: 8; }
 .z-9 { z-index: 9; }
 
-.no-scroll {
+.menu-is-open {
     overflow: hidden;
 
     .body-wrapper {
-        opacity: .3;
-        pointer-events: none;
+        pointer-events: auto;
+
+        .overlay {
+            opacity: .8;
+        }
     }
 }
 
+/*
 ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -189,3 +193,4 @@ body {
 	background: $gray-medium;
 	border-radius: 10px;
 }
+*/

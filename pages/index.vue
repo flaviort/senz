@@ -23,24 +23,24 @@
 					Whether you're a startup or a growing company, we provide everything you need to reach your clients.
 				</p>
 
-				<NuxtLink :to="{ name: 'About'}" class="inline-block px-10 py-4 transition-all duration-300 border border-white rounded-full hover:bg-white hover:text-black">
+				<NuxtLink :to="{ name: 'Services'}" class="inline-block px-10 py-4 transition-all duration-300 border border-white rounded-full hover:bg-white hover:text-black">
 					Our services
 				</NuxtLink>
 
 			</div>
 		</section>
 
-		<section class="relative py-24 md:pl-20 md:py-52" id="projects">
+		<section class="relative py-24 text-white md:pl-20 md:py-52" id="projects">
 			<div class="container-wrapper">
 				
-				<h3 class="mb-32 text-5xl font-bold text-white sm:text-6xl lg:text-7xl md:mb-72 mix-blend-exclusion projects-title">
+				<h3 class="mb-32 text-5xl font-bold sm:text-6xl lg:text-7xl md:mb-72 projects-title mix-blend-difference">
 					<span>Featured</span><br />
 					<span class="text-white-shadow">projects</span>
 				</h3>
 
 				<div class="relative flex projects">
 
-					<div class="w-1/2 text-white description mix-blend-exclusion pt-[25vh] relative z-2">
+					<div class="w-1/2 mix-blend-difference description pt-[25vh] relative z-2">
 
 						<div class="flex items-center w-[60vw] h-screen md:w-2/3">
 							<div class="project-infos-01">
@@ -99,7 +99,7 @@
 					</div>
 
 					<div class="project-image h-[90vh] w-5/12 overflow-hidden float-right">
-						<div class="relative w-full h-full bg-white">
+						<div class="relative w-full h-full">
 							
 							<div class="absolute top-0 left-0 block w-full h-full project-link-01 bg-slate-300 z-3">
 								<NuxtLink :to="{ name: 'LP Fitness' }" class="block w-full h-full project-link">
@@ -140,8 +140,7 @@
 
 <script>
 	const vh = (coef) => window.innerHeight * (coef/100);
-	const vw = (coef) => window.innerWidth * (coef/100);
-	
+
 	export default {
 		data() {
 			return {
@@ -162,78 +161,67 @@
 
 		methods: {
 			animateOnScroll() {
-      			this.$gsap.to('.projects .project-image', {
-        			scrollTrigger: {
-          				trigger: '.projects .project-image',
-						start: vh(-5) + 'top',
-    					end: vh(250) + ' top',
-          				pin: true,
-          				scrub: true,
-        			}
-      			})
+				this.$ScrollTrigger.create({
+					trigger: '.projects .project-image',
+					start: vh(-5) + 'top',
+					end: vh(250) + 'top',
+					pin: true,
+				})
     		},
 
 			bgColor() {
-				let tween = this.$gsap.to('body', {
-					backgroundColor: '#fff',
-					scrollTrigger: {
-          				trigger: '.projects-title',
-						start: vh(-10) + 'top',
-    					end: vh(20) + 'bottom',
-          				scrub: true,
-						clearProps: 'all',
-        			}
+				let tl = this.$gsap.timeline({ paused: true });
+				tl.to('body', { backgroundColor: '#fff' });
+
+				this.$ScrollTrigger.create({
+					trigger: '.projects-title',
+					start: '-100 top',
+					end: '200 top',
+					scrub: true,
+					animation: tl,
+					//markers: true,
 				})
 			},
 
 			projectImagesScroll01() {
-				this.$gsap.to('.project-link-01', {
-					autoAlpha: 0,
-					scrollTrigger: {
-          				trigger: '.description',
-						start: vh(70) + 'top',
-    					end: vh(90) + ' top',
-          				scrub: true,
-        			}
+				let tl = this.$gsap.timeline({ paused: true });
+				tl.to('.project-link-01', { autoAlpha: 0, });
+
+				this.$ScrollTrigger.create({
+					trigger: '.project-infos-01',
+					start: 'top top',
+					end: vh(30) + 'top',
+					scrub: true,
+					animation: tl,
 				})
 			},
 
 			projectImagesScroll02() {
-				this.$gsap.to('.project-link-02', {
-					autoAlpha: 0,
-					scrollTrigger: {
-          				trigger: '.description',
-						start: vh(170) + 'top',
-    					end: vh(190) + ' top',
-          				scrub: true,
-						//markers: {startColor: "blue", endColor: "purple", fontSize: "12px"}
-        			}
+				let tl = this.$gsap.timeline({ paused: true });
+				tl.to('.project-link-02', { autoAlpha: 0, });
+
+				this.$ScrollTrigger.create({
+					trigger: '.project-infos-02',
+					start: 'top top',
+					end: vh(30) + 'top',
+					scrub: true,
+					animation: tl,
 				})
 			},
 		},
 
 		mounted() {
-			this.$ScrollTrigger.refresh()
-			this.$ScrollTrigger.enable()
-
-			setTimeout(() => {
-				this.$gsap.to('body', {
-					clearProps: 'all',
-				})
-				this.animateOnScroll()	
-				this.projectImagesScroll01()
-				this.projectImagesScroll02()
-				this.bgColor()
-			}, 10)
+			this.animateOnScroll()	
+			this.projectImagesScroll01()
+			this.projectImagesScroll02()
+			this.bgColor()
 		},
 
 		beforeRouteLeave(from, to, next) {
 			setTimeout(() => {
-				this.$gsap.to('body', {
-					clearProps: 'all',
-				})
-				this.$ScrollTrigger.disable()
-			}, 200)
+				this.$gsap.to('body', { clearProps: 'all', })
+				this.$ScrollTrigger.getAll().forEach(ST => ST.kill());
+			}, 10)
 			next();
 		},
 	}
