@@ -51,18 +51,19 @@ export default {
 	buildModules: [
 		'@nuxtjs/router-extras',
 		'@nuxt/postcss8',
-		'nuxt-gsap-module'
+		'nuxt-gsap-module',
+		'@nuxtjs/device',
 	],
 
 	// gsap
 	gsap: {
 		extraPlugins: {
 			scrollTo: true,
-			scrollTrigger: true
+			scrollTrigger: true,
 		},
 		extraEases: {
 			expoScaleEase: true
-		}
+		},
 	},
 
 	// Modules: https://go.nuxtjs.dev/config-modules

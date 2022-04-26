@@ -1,24 +1,24 @@
-exports.ids = [6];
+exports.ids = [5];
 exports.modules = {
 
-/***/ 48:
+/***/ 44:
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
 
-/***/ 55:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_nuxtjs_router_extras_lib_loader_js_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_projects_vue_vue_type_custom_index_0_blockType_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+/* harmony import */ var _node_modules_nuxtjs_router_extras_lib_loader_js_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_projects_vue_vue_type_custom_index_0_blockType_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(44);
 /* harmony import */ var _node_modules_nuxtjs_router_extras_lib_loader_js_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_projects_vue_vue_type_custom_index_0_blockType_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_nuxtjs_router_extras_lib_loader_js_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_projects_vue_vue_type_custom_index_0_blockType_router__WEBPACK_IMPORTED_MODULE_0__);
  /* harmony default export */ __webpack_exports__["default"] = (_node_modules_nuxtjs_router_extras_lib_loader_js_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_projects_vue_vue_type_custom_index_0_blockType_router__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ 63:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73,10 +73,10 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./pages/projects.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_projectsvue_type_script_lang_js_ = (projectsvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./pages/projects.vue?vue&type=custom&index=0&blockType=router
-var projectsvue_type_custom_index_0_blockType_router = __webpack_require__(55);
+var projectsvue_type_custom_index_0_blockType_router = __webpack_require__(51);
 
 // CONCATENATED MODULE: ./pages/projects.vue
 

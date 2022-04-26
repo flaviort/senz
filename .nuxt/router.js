@@ -7,9 +7,9 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _0bea9cba = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _8399aae6 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
 const _1099d646 = () => interopDefault(import('../pages/projects.vue' /* webpackChunkName: "pages/projects" */))
+const _000adf7e = () => interopDefault(import('../pages/projects/lp-fitness.vue' /* webpackChunkName: "pages/projects/lp-fitness" */))
 const _55af0a7e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _2ba2777f = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _d140f210 = () => interopDefault(import('../pages/_projects/lp-fitness.vue' /* webpackChunkName: "pages/_projects/lp-fitness" */))
 
 const emptyFn = () => {}
 
@@ -33,7 +33,12 @@ export const routerOptions = {
   }, {
     path: "/projects",
     component: _1099d646,
-    name: "Projects"
+    name: "Projects",
+    children: [{
+      path: "lp-fitness",
+      component: _000adf7e,
+      name: "LP Fitness"
+    }]
   }, {
     path: "/services",
     component: _55af0a7e,
@@ -42,10 +47,6 @@ export const routerOptions = {
     path: "/",
     component: _2ba2777f,
     name: "Home"
-  }, {
-    path: "/:projects/lp-fitness",
-    component: _d140f210,
-    name: "LP Fitness"
   }],
 
   fallback: false

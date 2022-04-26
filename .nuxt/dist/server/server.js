@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"components/buttons-arrow-down","2":"pages/_projects/lp-fitness","3":"pages/about","4":"pages/contact","5":"pages/index","6":"pages/projects","7":"pages/services"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"components/buttons-arrow-down","2":"pages/about","3":"pages/contact","4":"pages/index","5":"pages/projects","6":"pages/projects/lp-fitness","7":"pages/services"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -115,7 +115,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -126,6 +126,12 @@ module.exports = require("vue");
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("ufo");
+
+/***/ }),
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -229,12 +235,6 @@ function normalizeComponent (
   }
 }
 
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("ufo");
 
 /***/ }),
 /* 3 */
@@ -462,7 +462,7 @@ module.exports = require("vue-router");
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(20);
+var content = __webpack_require__(19);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -479,7 +479,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(22);
+var content = __webpack_require__(21);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -496,67 +496,50 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(33);
+var content = __webpack_require__(32);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(5).default
 module.exports.__inject__ = function (context) {
-  add("2c8dc838", content, true, context)
+  add("7238d9a6", content, true, context)
 };
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(35);
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add CSS to SSR context
-var add = __webpack_require__(5).default
-module.exports.__inject__ = function (context) {
-  add("00099969", content, true, context)
-};
-
-/***/ }),
-/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("node-fetch");
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("vue-meta");
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/services-bg.7edd6a2.jpg";
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/projects-bg.2d3323a.jpg";
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
-module.exports = __webpack_require__(37);
+__webpack_require__(17);
+module.exports = __webpack_require__(34);
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 global.installComponents = function (component, components) {
@@ -600,7 +583,7 @@ function provideFunctionalComponents(component, components) {
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -611,7 +594,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -625,7 +608,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -636,7 +619,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -650,31 +633,31 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(24);
+var content = __webpack_require__(23);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 __webpack_require__(5).default("fcbcc66c", content, true)
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(25);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(26);
-var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(27);
-var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(28);
-var ___CSS_LOADER_URL_IMPORT_3___ = __webpack_require__(29);
-var ___CSS_LOADER_URL_IMPORT_4___ = __webpack_require__(30);
-var ___CSS_LOADER_URL_IMPORT_5___ = __webpack_require__(31);
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(24);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(25);
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(26);
+var ___CSS_LOADER_URL_IMPORT_2___ = __webpack_require__(27);
+var ___CSS_LOADER_URL_IMPORT_3___ = __webpack_require__(28);
+var ___CSS_LOADER_URL_IMPORT_4___ = __webpack_require__(29);
+var ___CSS_LOADER_URL_IMPORT_5___ = __webpack_require__(30);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
@@ -683,14 +666,14 @@ var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
 var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/*! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com*//*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n\n::before,\n::after {\n  --tw-content: '';\n}\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n*/\n\nhtml {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 4 */\n}\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\n\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\n\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\n\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n/*\nRemove the default font size and weight for headings.\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\n\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/*\nAdd the correct font size in all browsers.\n*/\n\nsmall {\n  font-size: 80%;\n}\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\n\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\n\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n\n:-moz-focusring {\n  outline: auto;\n}\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\n\nprogress {\n  vertical-align: baseline;\n}\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\n\nsummary {\n  display: list-item;\n}\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nlegend {\n  padding: 0;\n}\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n/*\nSet the default cursor for buttons.\n*/\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/*\nEnsure the default browser behavior of the `hidden` attribute.\n*/\n\n[hidden] {\n  display: none;\n}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}body{font-size:1rem;line-height:1.5rem;will-change:auto;}.container-wrapper{margin-left:auto;margin-right:auto;width:100%;max-width:1536px;padding-left:1.5rem;padding-right:1.5rem;}.pointer-events-none{pointer-events:none;}.static{position:static;}.fixed{position:fixed;}.absolute{position:absolute;}.relative{position:relative;}.left-0{left:0px;}.top-4{top:1rem;}.right-6{right:1.5rem;}.top-0{top:0px;}.top-6{top:1.5rem;}.right-5{right:1.25rem;}.bottom-5{bottom:1.25rem;}.top-1\\/2{top:50%;}.left-1\\/2{left:50%;}.right-0{right:0px;}.z-40{z-index:40;}.z-50{z-index:50;}.z-20{z-index:20;}.z-10{z-index:10;}.z-0{z-index:0;}.float-right{float:right;}.float-left{float:left;}.mx-auto{margin-left:auto;margin-right:auto;}.my-1\\.5{margin-top:0.375rem;margin-bottom:0.375rem;}.my-1{margin-top:0.25rem;margin-bottom:0.25rem;}.mb-6{margin-bottom:1.5rem;}.mb-5{margin-bottom:1.25rem;}.mb-10{margin-bottom:2.5rem;}.mt-5{margin-top:1.25rem;}.mt-10{margin-top:2.5rem;}.mb-12{margin-bottom:3rem;}.mb-32{margin-bottom:8rem;}.mt-4{margin-top:1rem;}.mb-\\[20vh\\]{margin-bottom:20vh;}.mr-10{margin-right:2.5rem;}.mr-6{margin-right:1.5rem;}.mt-14{margin-top:3.5rem;}.mb-4{margin-bottom:1rem;}.mt-8{margin-top:2rem;}.mb-2{margin-bottom:0.5rem;}.-ml-6{margin-left:-1.5rem;}.-mr-6{margin-right:-1.5rem;}.block{display:block;}.inline-block{display:inline-block;}.flex{display:flex;}.hidden{display:none;}.h-screen{height:100vh;}.h-full{height:100%;}.h-auto{height:auto;}.h-\\[2px\\]{height:2px;}.h-\\[90vh\\]{height:90vh;}.h-5{height:1.25rem;}.h-14{height:3.5rem;}.h-6{height:1.5rem;}.\\!h-\\[150px\\]{height:150px !important;}.h-\\[1px\\]{height:1px;}.min-h-screen{min-height:100vh;}.w-\\[calc\\(100vw-80px\\)\\]{width:calc(100vw - 80px);}.w-full{width:100%;}.w-24{width:6rem;}.w-8{width:2rem;}.w-0{width:0px;}.w-2\\/3{width:66.666667%;}.w-1\\/2{width:50%;}.w-\\[60vw\\]{width:60vw;}.w-5\\/12{width:41.666667%;}.w-5{width:1.25rem;}.w-14{width:3.5rem;}.w-6{width:1.5rem;}.\\!w-\\[150px\\]{width:150px !important;}.w-4\\/5{width:80%;}.w-28{width:7rem;}.w-screen{width:100vw;}.max-w-full{max-width:100%;}.-translate-x-full{--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-x-1\\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-y-1\\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-x-\\[250\\%\\]{--tw-translate-x:-250%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-rotate-90{--tw-rotate:-90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-rotate-180{--tw-rotate:-180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.\\!rotate-0{--tw-rotate:0deg !important;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;}.scale-50{--tw-scale-x:.5;--tw-scale-y:.5;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.\\!scale-100{--tw-scale-x:1 !important;--tw-scale-y:1 !important;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.cursor-pointer{cursor:pointer;}.columns-3{-moz-columns:3;columns:3;}.flex-col{flex-direction:column;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-between{justify-content:space-between;}.gap-x-16{-moz-column-gap:4rem;column-gap:4rem;}.overflow-hidden{overflow:hidden;}.rounded{border-radius:0.25rem;}.rounded-full{border-radius:9999px;}.border{border-width:1px;}.border-b{border-bottom-width:1px;}.border-solid{border-style:solid;}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity));}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity));}.border-zinc-600{--tw-border-opacity:1;border-color:rgb(82 82 91 / var(--tw-border-opacity));}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity));}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.bg-zinc-400{--tw-bg-opacity:1;background-color:rgb(161 161 170 / var(--tw-bg-opacity));}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity));}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity));}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity));}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity));}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity));}.bg-zinc-800{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity));}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity));}.stroke-blue-600{stroke:#2563eb;}.stroke-\\[3px\\]{stroke-width:3px;}.object-cover{-o-object-fit:cover;object-fit:cover;}.p-0{padding:0px;}.py-32{padding-top:8rem;padding-bottom:8rem;}.px-8{padding-left:2rem;padding-right:2rem;}.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}.px-10{padding-left:2.5rem;padding-right:2.5rem;}.py-4{padding-top:1rem;padding-bottom:1rem;}.py-24{padding-top:6rem;padding-bottom:6rem;}.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}.py-14{padding-top:3.5rem;padding-bottom:3.5rem;}.pl-7{padding-left:1.75rem;}.pl-6{padding-left:1.5rem;}.pr-6{padding-right:1.5rem;}.pt-40{padding-top:10rem;}.pb-28{padding-bottom:7rem;}.pt-\\[25vh\\]{padding-top:25vh;}.pt-28{padding-top:7rem;}.pb-52{padding-bottom:13rem;}.pt-16{padding-top:4rem;}.pb-12{padding-bottom:3rem;}.text-center{text-align:center;}.text-right{text-align:right;}.align-middle{vertical-align:middle;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-sm{font-size:0.875rem;line-height:1.25rem;}.text-\\[12vw\\]{font-size:12vw;}.text-5xl{font-size:3rem;line-height:1;}.text-lg{font-size:1.125rem;line-height:1.75rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-xl{font-size:1.25rem;line-height:1.75rem;}.text-2xl{font-size:1.5rem;line-height:2rem;}.font-bold{font-weight:700;}.leading-none{line-height:1;}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity));}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity));}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}.text-zinc-200{--tw-text-opacity:1;color:rgb(228 228 231 / var(--tw-text-opacity));}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity));}.\\!text-transparent{color:transparent !important;}.\\!text-blue-600{--tw-text-opacity:1 !important;color:rgb(37 99 235 / var(--tw-text-opacity)) !important;}.text-zinc-300{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity));}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity));}.opacity-0{opacity:0;}.opacity-100{opacity:1;}.mix-blend-difference{mix-blend-mode:difference;}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.duration-500{transition-duration:500ms;}.duration-300{transition-duration:300ms;}.duration-1000{transition-duration:1000ms;}.will-change-transform{will-change:transform;}.will-change-\\[opacity\\]{will-change:opacity;}.hvr-bounce-to-right{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-right,.hvr-bounce-to-right:before{transition-duration:.5s}.hvr-bounce-to-right:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleX(0);transform-origin:0 50%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-right:active,.hvr-bounce-to-right:focus,.hvr-bounce-to-right:hover{color:#fff}.hvr-bounce-to-right:active:before,.hvr-bounce-to-right:focus:before,.hvr-bounce-to-right:hover:before{transform:scaleX(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-left{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-left,.hvr-bounce-to-left:before{transition-duration:.5s}.hvr-bounce-to-left:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleX(0);transform-origin:100% 50%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-left:active,.hvr-bounce-to-left:focus,.hvr-bounce-to-left:hover{color:#fff}.hvr-bounce-to-left:active:before,.hvr-bounce-to-left:focus:before,.hvr-bounce-to-left:hover:before{transform:scaleX(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-bottom{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-bottom,.hvr-bounce-to-bottom:before{transition-duration:.5s}.hvr-bounce-to-bottom:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleY(0);transform-origin:50% 0;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-bottom:active,.hvr-bounce-to-bottom:focus,.hvr-bounce-to-bottom:hover{color:#fff}.hvr-bounce-to-bottom:active:before,.hvr-bounce-to-bottom:focus:before,.hvr-bounce-to-bottom:hover:before{transform:scaleY(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-top{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-top,.hvr-bounce-to-top:before{transition-duration:.5s}.hvr-bounce-to-top:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleY(0);transform-origin:50% 100%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-top:active,.hvr-bounce-to-top:focus,.hvr-bounce-to-top:hover{color:#fff}.hvr-bounce-to-top:active:before,.hvr-bounce-to-top:focus:before,.hvr-bounce-to-top:hover:before{transform:scaleY(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-underline-from-left{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-left:before{content:\"\";position:absolute;z-index:-1;left:0;right:100%;bottom:0;background:#000;height:4px;transition-property:right;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-left:active:before,.hvr-underline-from-left:focus:before,.hvr-underline-from-left:hover:before{right:0}.hvr-underline-from-center{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-center:before{content:\"\";position:absolute;z-index:-1;left:50%;right:50%;bottom:0;background:#000;height:4px;transition-property:left,right;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-center:active:before,.hvr-underline-from-center:focus:before,.hvr-underline-from-center:hover:before{left:0;right:0}.hvr-underline-from-right{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-right:before{content:\"\";position:absolute;z-index:-1;left:100%;right:0;bottom:0;background:#000;height:4px;transition-property:left;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-right:active:before,.hvr-underline-from-right:focus:before,.hvr-underline-from-right:hover:before{left:0}html{-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:transparent}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none}a,button,input[type=button],input[type=file],input[type=image],input[type=reset],input[type=submit],label[for]{cursor:pointer}a[href^=tel],button[disabled],input[disabled],select[disabled],textarea[disabled]{cursor:default}a[href^=tel],input[type=color],input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}textarea{overflow:auto;-webkit-overflow-scrolling:touch;overflow-scrolling:touch}@media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff\");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format(\"woff\");font-weight:700;font-style:normal;font-display:swap}body{background-color:#000;font-family:\"Plain\",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}.animate-fade-in-out-down{-webkit-animation:fade-in-out-down 2s ease-out infinite;animation:fade-in-out-down 2s ease-out infinite}.text-white-shadow{color:transparent;text-shadow:none;-webkit-text-stroke:.8px #fff}.text-black-shadow{color:transparent;text-shadow:none;-webkit-text-stroke:.8px #000}@-webkit-keyframes fade-in-out-down{0%{transform:translateY(-200%);opacity:0}75%{transform:translateY(0);opacity:1}to{transform:translateY(10%);opacity:0}}@keyframes fade-in-out-down{0%{transform:translateY(-200%);opacity:0}75%{transform:translateY(0);opacity:1}to{transform:translateY(10%);opacity:0}}.z-1{z-index:1}.z-2{z-index:2}.z-3{z-index:3}.z-4{z-index:4}.z-5{z-index:5}.z-6{z-index:6}.z-7{z-index:7}.z-8{z-index:8}.z-9{z-index:9}.menu-is-open{overflow:hidden}.menu-is-open .body-wrapper{pointer-events:auto}.menu-is-open .body-wrapper .overlay{opacity:.8}.before\\:absolute::before{content:var(--tw-content);position:absolute;}.before\\:top-0::before{content:var(--tw-content);top:0px;}.before\\:left-0::before{content:var(--tw-content);left:0px;}.before\\:h-\\[1px\\]::before{content:var(--tw-content);height:1px;}.before\\:h-full::before{content:var(--tw-content);height:100%;}.before\\:h-\\[2px\\]::before{content:var(--tw-content);height:2px;}.before\\:w-full::before{content:var(--tw-content);width:100%;}.before\\:-translate-x-full::before{content:var(--tw-content);--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.before\\:bg-white::before{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.before\\:transition-all::before{content:var(--tw-content);transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.before\\:delay-100::before{content:var(--tw-content);transition-delay:100ms;}.before\\:delay-200::before{content:var(--tw-content);transition-delay:200ms;}.before\\:duration-300::before{content:var(--tw-content);transition-duration:300ms;}.hover\\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.hover\\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity));}.hover\\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}.hover\\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity));}.group:hover .group-hover\\:translate-x-\\[250\\%\\]{--tw-translate-x:250%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:-translate-x-1\\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:translate-x-2{--tw-translate-x:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:border-zinc-400{--tw-border-opacity:1;border-color:rgb(161 161 170 / var(--tw-border-opacity));}.group:hover .group-hover\\:opacity-20{opacity:0.2;}.group:hover .group-hover\\:before\\:translate-x-0::before{content:var(--tw-content);--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}@media (min-width: 640px){.sm\\:right-10{right:2.5rem;}.sm\\:bottom-10{bottom:2.5rem;}.sm\\:w-1\\/2{width:50%;}.sm\\:py-52{padding-top:13rem;padding-bottom:13rem;}.sm\\:text-7xl{font-size:4.5rem;line-height:1;}.sm\\:text-6xl{font-size:3.75rem;line-height:1;}.sm\\:text-xl{font-size:1.25rem;line-height:1.75rem;}.sm\\:text-5xl{font-size:3rem;line-height:1;}}@media (min-width: 768px){.md\\:static{position:static;}.md\\:fixed{position:fixed;}.md\\:relative{position:relative;}.md\\:right-auto{right:auto;}.md\\:right-16{right:4rem;}.md\\:bottom-16{bottom:4rem;}.md\\:float-none{float:none;}.md\\:mx-0{margin-left:0px;margin-right:0px;}.md\\:mx-auto{margin-left:auto;margin-right:auto;}.md\\:mb-10{margin-bottom:2.5rem;}.md\\:mb-7{margin-bottom:1.75rem;}.md\\:mt-0{margin-top:0px;}.md\\:mt-5{margin-top:1.25rem;}.md\\:mb-72{margin-bottom:18rem;}.md\\:mb-20{margin-bottom:5rem;}.md\\:mt-20{margin-top:5rem;}.md\\:mt-16{margin-top:4rem;}.md\\:mb-12{margin-bottom:3rem;}.md\\:ml-0{margin-left:0px;}.md\\:mr-0{margin-right:0px;}.md\\:block{display:block;}.md\\:inline-block{display:inline-block;}.md\\:flex{display:flex;}.md\\:hidden{display:none;}.md\\:h-screen{height:100vh;}.md\\:w-\\[600px\\]{width:600px;}.md\\:w-auto{width:auto;}.md\\:w-10{width:2.5rem;}.md\\:w-2\\/3{width:66.666667%;}.md\\:w-full{width:100%;}.md\\:w-1\\/2{width:50%;}.md\\:w-fit{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;}.md\\:w-\\[50vw\\]{width:50vw;}.md\\:w-\\[250px\\]{width:250px;}.md\\:-translate-y-20{--tw-translate-y:-5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.md\\:columns-2{-moz-columns:2;columns:2;}.md\\:flex-row{flex-direction:row;}.md\\:flex-col{flex-direction:column;}.md\\:items-center{align-items:center;}.md\\:justify-center{justify-content:center;}.md\\:justify-between{justify-content:space-between;}.md\\:gap-4{gap:1rem;}.md\\:border-0{border-width:0px;}.md\\:py-40{padding-top:10rem;padding-bottom:10rem;}.md\\:py-52{padding-top:13rem;padding-bottom:13rem;}.md\\:pl-5{padding-left:1.25rem;}.md\\:pr-0{padding-right:0px;}.md\\:pl-20{padding-left:5rem;}.md\\:pt-24{padding-top:6rem;}.md\\:text-right{text-align:right;}.md\\:text-5xl{font-size:3rem;line-height:1;}.md\\:text-2xl{font-size:1.5rem;line-height:2rem;}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem;}.md\\:text-base{font-size:1rem;line-height:1.5rem;}}@media (min-width: 1024px){.lg\\:right-24{right:6rem;}.lg\\:bottom-24{bottom:6rem;}.lg\\:w-4\\/12{width:33.333333%;}.lg\\:gap-x-28{-moz-column-gap:7rem;column-gap:7rem;}.lg\\:text-8xl{font-size:6rem;line-height:1;}.lg\\:text-7xl{font-size:4.5rem;line-height:1;}.lg\\:text-6xl{font-size:3.75rem;line-height:1;}}@media (min-width: 1280px){.xl\\:text-9xl{font-size:8rem;line-height:1;}}@media (max-height: 450px){.small\\:hidden{display:none;}.small\\:-translate-y-10{--tw-translate-y:-2.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "/*! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com*//*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n\n::before,\n::after {\n  --tw-content: '';\n}\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n*/\n\nhtml {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 4 */\n}\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\n\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\n\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\n\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n/*\nRemove the default font size and weight for headings.\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/*\n1. Use the user's configured `mono` font family by default.\n2. Correct the odd `em` font sizing in all browsers.\n*/\n\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/*\nAdd the correct font size in all browsers.\n*/\n\nsmall {\n  font-size: 80%;\n}\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\n\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\n\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n\n:-moz-focusring {\n  outline: auto;\n}\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\n\nprogress {\n  vertical-align: baseline;\n}\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\n\nsummary {\n  display: list-item;\n}\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nlegend {\n  padding: 0;\n}\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n/*\nSet the default cursor for buttons.\n*/\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/*\nEnsure the default browser behavior of the `hidden` attribute.\n*/\n\n[hidden] {\n  display: none;\n}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;}body{font-size:1rem;line-height:1.5rem;will-change:auto;}.container-wrapper{margin-left:auto;margin-right:auto;width:100%;max-width:1536px;padding-left:1.5rem;padding-right:1.5rem;}.pointer-events-none{pointer-events:none;}.static{position:static;}.fixed{position:fixed;}.absolute{position:absolute;}.relative{position:relative;}.left-0{left:0px;}.top-16{top:4rem;}.top-4{top:1rem;}.right-6{right:1.5rem;}.top-0{top:0px;}.top-6{top:1.5rem;}.right-5{right:1.25rem;}.bottom-5{bottom:1.25rem;}.top-1\\/2{top:50%;}.left-1\\/2{left:50%;}.right-0{right:0px;}.z-40{z-index:40;}.z-50{z-index:50;}.z-20{z-index:20;}.z-10{z-index:10;}.z-0{z-index:0;}.float-right{float:right;}.float-left{float:left;}.mx-auto{margin-left:auto;margin-right:auto;}.my-1\\.5{margin-top:0.375rem;margin-bottom:0.375rem;}.my-1{margin-top:0.25rem;margin-bottom:0.25rem;}.mb-6{margin-bottom:1.5rem;}.mb-4{margin-bottom:1rem;}.mt-5{margin-top:1.25rem;}.mb-5{margin-bottom:1.25rem;}.mt-10{margin-top:2.5rem;}.mb-12{margin-bottom:3rem;}.mb-32{margin-bottom:8rem;}.mt-4{margin-top:1rem;}.mb-\\[20vh\\]{margin-bottom:20vh;}.mr-10{margin-right:2.5rem;}.mr-6{margin-right:1.5rem;}.mb-10{margin-bottom:2.5rem;}.mt-14{margin-top:3.5rem;}.mt-8{margin-top:2rem;}.mb-2{margin-bottom:0.5rem;}.-ml-6{margin-left:-1.5rem;}.-mr-6{margin-right:-1.5rem;}.block{display:block;}.inline-block{display:inline-block;}.flex{display:flex;}.hidden{display:none;}.h-screen{height:100vh;}.h-full{height:100%;}.h-auto{height:auto;}.h-\\[2px\\]{height:2px;}.h-\\[90vh\\]{height:90vh;}.h-5{height:1.25rem;}.h-14{height:3.5rem;}.h-6{height:1.5rem;}.\\!h-\\[150px\\]{height:150px !important;}.h-\\[1px\\]{height:1px;}.min-h-screen{min-height:100vh;}.w-\\[calc\\(100vw-80px\\)\\]{width:calc(100vw - 80px);}.w-full{width:100%;}.w-24{width:6rem;}.w-8{width:2rem;}.w-0{width:0px;}.w-2\\/3{width:66.666667%;}.w-1\\/2{width:50%;}.w-\\[60vw\\]{width:60vw;}.w-5\\/12{width:41.666667%;}.w-5{width:1.25rem;}.w-14{width:3.5rem;}.w-6{width:1.5rem;}.\\!w-\\[150px\\]{width:150px !important;}.w-4\\/5{width:80%;}.w-28{width:7rem;}.w-screen{width:100vw;}.max-w-full{max-width:100%;}.-translate-x-full{--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-x-1\\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-y-1\\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-translate-x-\\[250\\%\\]{--tw-translate-x:-250%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-rotate-90{--tw-rotate:-90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.-rotate-180{--tw-rotate:-180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.\\!rotate-0{--tw-rotate:0deg !important;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;}.scale-50{--tw-scale-x:.5;--tw-scale-y:.5;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.\\!scale-100{--tw-scale-x:1 !important;--tw-scale-y:1 !important;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.cursor-pointer{cursor:pointer;}.columns-3{-moz-columns:3;columns:3;}.flex-col{flex-direction:column;}.items-center{align-items:center;}.justify-start{justify-content:flex-start;}.justify-between{justify-content:space-between;}.gap-x-16{-moz-column-gap:4rem;column-gap:4rem;}.overflow-hidden{overflow:hidden;}.rounded{border-radius:0.25rem;}.rounded-full{border-radius:9999px;}.border{border-width:1px;}.border-b{border-bottom-width:1px;}.border-solid{border-style:solid;}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity));}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity));}.border-zinc-600{--tw-border-opacity:1;border-color:rgb(82 82 91 / var(--tw-border-opacity));}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity));}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.bg-zinc-400{--tw-bg-opacity:1;background-color:rgb(161 161 170 / var(--tw-bg-opacity));}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity));}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity));}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity));}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity));}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity));}.bg-zinc-800{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity));}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity));}.stroke-blue-600{stroke:#2563eb;}.stroke-\\[3px\\]{stroke-width:3px;}.object-cover{-o-object-fit:cover;object-fit:cover;}.p-0{padding:0px;}.py-32{padding-top:8rem;padding-bottom:8rem;}.py-1{padding-top:0.25rem;padding-bottom:0.25rem;}.px-8{padding-left:2rem;padding-right:2rem;}.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}.px-10{padding-left:2.5rem;padding-right:2.5rem;}.py-4{padding-top:1rem;padding-bottom:1rem;}.py-24{padding-top:6rem;padding-bottom:6rem;}.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}.py-14{padding-top:3.5rem;padding-bottom:3.5rem;}.pl-7{padding-left:1.75rem;}.pl-6{padding-left:1.5rem;}.pr-6{padding-right:1.5rem;}.pt-40{padding-top:10rem;}.pb-28{padding-bottom:7rem;}.pt-\\[25vh\\]{padding-top:25vh;}.pt-28{padding-top:7rem;}.pb-52{padding-bottom:13rem;}.pt-16{padding-top:4rem;}.pb-12{padding-bottom:3rem;}.text-center{text-align:center;}.text-right{text-align:right;}.align-middle{vertical-align:middle;}.text-4xl{font-size:2.25rem;line-height:2.5rem;}.text-sm{font-size:0.875rem;line-height:1.25rem;}.text-\\[12vw\\]{font-size:12vw;}.text-5xl{font-size:3rem;line-height:1;}.text-lg{font-size:1.125rem;line-height:1.75rem;}.text-3xl{font-size:1.875rem;line-height:2.25rem;}.text-xl{font-size:1.25rem;line-height:1.75rem;}.text-2xl{font-size:1.5rem;line-height:2rem;}.font-bold{font-weight:700;}.leading-none{line-height:1;}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity));}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity));}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity));}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}.text-zinc-200{--tw-text-opacity:1;color:rgb(228 228 231 / var(--tw-text-opacity));}.\\!text-transparent{color:transparent !important;}.\\!text-blue-600{--tw-text-opacity:1 !important;color:rgb(37 99 235 / var(--tw-text-opacity)) !important;}.text-zinc-300{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity));}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity));}.opacity-0{opacity:0;}.opacity-100{opacity:1;}.mix-blend-difference{mix-blend-mode:difference;}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.duration-300{transition-duration:300ms;}.duration-500{transition-duration:500ms;}.duration-1000{transition-duration:1000ms;}.will-change-transform{will-change:transform;}.will-change-\\[opacity\\]{will-change:opacity;}.hvr-bounce-to-right{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-right,.hvr-bounce-to-right:before{transition-duration:.5s}.hvr-bounce-to-right:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleX(0);transform-origin:0 50%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-right:active,.hvr-bounce-to-right:focus,.hvr-bounce-to-right:hover{color:#fff}.hvr-bounce-to-right:active:before,.hvr-bounce-to-right:focus:before,.hvr-bounce-to-right:hover:before{transform:scaleX(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-left{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-left,.hvr-bounce-to-left:before{transition-duration:.5s}.hvr-bounce-to-left:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleX(0);transform-origin:100% 50%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-left:active,.hvr-bounce-to-left:focus,.hvr-bounce-to-left:hover{color:#fff}.hvr-bounce-to-left:active:before,.hvr-bounce-to-left:focus:before,.hvr-bounce-to-left:hover:before{transform:scaleX(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-bottom{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-bottom,.hvr-bounce-to-bottom:before{transition-duration:.5s}.hvr-bounce-to-bottom:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleY(0);transform-origin:50% 0;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-bottom:active,.hvr-bounce-to-bottom:focus,.hvr-bounce-to-bottom:hover{color:#fff}.hvr-bounce-to-bottom:active:before,.hvr-bounce-to-bottom:focus:before,.hvr-bounce-to-bottom:hover:before{transform:scaleY(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-bounce-to-top{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;transition-property:color}.hvr-bounce-to-top,.hvr-bounce-to-top:before{transition-duration:.5s}.hvr-bounce-to-top:before{content:\"\";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:#000;transform:scaleY(0);transform-origin:50% 100%;transition-property:transform;transition-timing-function:ease-out}.hvr-bounce-to-top:active,.hvr-bounce-to-top:focus,.hvr-bounce-to-top:hover{color:#fff}.hvr-bounce-to-top:active:before,.hvr-bounce-to-top:focus:before,.hvr-bounce-to-top:hover:before{transform:scaleY(1);transition-timing-function:cubic-bezier(.52,1.64,.37,.66)}.hvr-underline-from-left{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-left:before{content:\"\";position:absolute;z-index:-1;left:0;right:100%;bottom:0;background:#000;height:4px;transition-property:right;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-left:active:before,.hvr-underline-from-left:focus:before,.hvr-underline-from-left:hover:before{right:0}.hvr-underline-from-center{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-center:before{content:\"\";position:absolute;z-index:-1;left:50%;right:50%;bottom:0;background:#000;height:4px;transition-property:left,right;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-center:active:before,.hvr-underline-from-center:focus:before,.hvr-underline-from-center:hover:before{left:0;right:0}.hvr-underline-from-right{display:inline-block;vertical-align:middle;transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden}.hvr-underline-from-right:before{content:\"\";position:absolute;z-index:-1;left:100%;right:0;bottom:0;background:#000;height:4px;transition-property:left;transition-duration:.3s;transition-timing-function:ease-out}.hvr-underline-from-right:active:before,.hvr-underline-from-right:focus:before,.hvr-underline-from-right:hover:before{left:0}html{-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:transparent}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none}a,button,input[type=button],input[type=file],input[type=image],input[type=reset],input[type=submit],label[for]{cursor:pointer}a[href^=tel],button[disabled],input[disabled],select[disabled],textarea[disabled]{cursor:default}a[href^=tel],input[type=color],input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}textarea{overflow:auto;-webkit-overflow-scrolling:touch;overflow-scrolling:touch}@media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") format(\"woff\");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") format(\"woff\");font-weight:900;font-style:normal;font-display:swap}@font-face{font-family:\"Plain\";src:url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ") format(\"woff2\"),url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ") format(\"woff\");font-weight:700;font-style:normal;font-display:swap}body{background-color:#000;font-family:\"Plain\",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}.animate-fade-in-out-down{-webkit-animation:fade-in-out-down 2s ease-out infinite;animation:fade-in-out-down 2s ease-out infinite}.text-white-shadow{color:transparent;text-shadow:none;-webkit-text-stroke:.8px #fff}.text-black-shadow{color:transparent;text-shadow:none;-webkit-text-stroke:.8px #000}@-webkit-keyframes fade-in-out-down{0%{transform:translateY(-200%);opacity:0}75%{transform:translateY(0);opacity:1}to{transform:translateY(10%);opacity:0}}@keyframes fade-in-out-down{0%{transform:translateY(-200%);opacity:0}75%{transform:translateY(0);opacity:1}to{transform:translateY(10%);opacity:0}}.z-1{z-index:1}.z-2{z-index:2}.z-3{z-index:3}.z-4{z-index:4}.z-5{z-index:5}.z-6{z-index:6}.z-7{z-index:7}.z-8{z-index:8}.z-9{z-index:9}.menu-is-open{overflow:hidden}.menu-is-open .body-wrapper{pointer-events:auto}.menu-is-open .body-wrapper .overlay{opacity:.8}.before\\:absolute::before{content:var(--tw-content);position:absolute;}.before\\:top-0::before{content:var(--tw-content);top:0px;}.before\\:left-0::before{content:var(--tw-content);left:0px;}.before\\:h-full::before{content:var(--tw-content);height:100%;}.before\\:h-\\[2px\\]::before{content:var(--tw-content);height:2px;}.before\\:w-full::before{content:var(--tw-content);width:100%;}.before\\:-translate-x-full::before{content:var(--tw-content);--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.before\\:bg-white::before{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.before\\:transition-all::before{content:var(--tw-content);transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}.before\\:delay-100::before{content:var(--tw-content);transition-delay:100ms;}.before\\:delay-200::before{content:var(--tw-content);transition-delay:200ms;}.before\\:duration-300::before{content:var(--tw-content);transition-duration:300ms;}.hover\\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity));}.hover\\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity));}.hover\\:text-zinc-400:hover{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity));}.hover\\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}.hover\\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity));}.group:hover .group-hover\\:top-0{top:0px;}.group:hover .group-hover\\:-translate-y-16{--tw-translate-y:-4rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:translate-x-\\[250\\%\\]{--tw-translate-x:250%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:-translate-x-1\\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:translate-x-2{--tw-translate-x:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.group:hover .group-hover\\:border-zinc-400{--tw-border-opacity:1;border-color:rgb(161 161 170 / var(--tw-border-opacity));}.group:hover .group-hover\\:opacity-0{opacity:0;}.group:hover .group-hover\\:opacity-100{opacity:1;}.group:hover .group-hover\\:opacity-20{opacity:0.2;}.group:hover .group-hover\\:before\\:translate-x-0::before{content:var(--tw-content);--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}@media (min-width: 640px){.sm\\:right-10{right:2.5rem;}.sm\\:bottom-10{bottom:2.5rem;}.sm\\:w-1\\/2{width:50%;}.sm\\:py-52{padding-top:13rem;padding-bottom:13rem;}.sm\\:text-7xl{font-size:4.5rem;line-height:1;}.sm\\:text-6xl{font-size:3.75rem;line-height:1;}.sm\\:text-xl{font-size:1.25rem;line-height:1.75rem;}.sm\\:text-5xl{font-size:3rem;line-height:1;}}@media (min-width: 768px){.md\\:static{position:static;}.md\\:fixed{position:fixed;}.md\\:relative{position:relative;}.md\\:right-auto{right:auto;}.md\\:right-16{right:4rem;}.md\\:bottom-16{bottom:4rem;}.md\\:float-none{float:none;}.md\\:mx-0{margin-left:0px;margin-right:0px;}.md\\:mx-auto{margin-left:auto;margin-right:auto;}.md\\:mb-10{margin-bottom:2.5rem;}.md\\:mb-6{margin-bottom:1.5rem;}.md\\:mt-0{margin-top:0px;}.md\\:mt-5{margin-top:1.25rem;}.md\\:mb-72{margin-bottom:18rem;}.md\\:mb-20{margin-bottom:5rem;}.md\\:mt-20{margin-top:5rem;}.md\\:mt-16{margin-top:4rem;}.md\\:mb-12{margin-bottom:3rem;}.md\\:ml-0{margin-left:0px;}.md\\:mr-0{margin-right:0px;}.md\\:block{display:block;}.md\\:inline-block{display:inline-block;}.md\\:flex{display:flex;}.md\\:hidden{display:none;}.md\\:h-screen{height:100vh;}.md\\:w-\\[600px\\]{width:600px;}.md\\:w-auto{width:auto;}.md\\:w-10{width:2.5rem;}.md\\:w-2\\/3{width:66.666667%;}.md\\:w-full{width:100%;}.md\\:w-1\\/2{width:50%;}.md\\:w-fit{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;}.md\\:w-\\[50vw\\]{width:50vw;}.md\\:w-\\[250px\\]{width:250px;}.md\\:-translate-y-20{--tw-translate-y:-5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}.md\\:columns-2{-moz-columns:2;columns:2;}.md\\:flex-row{flex-direction:row;}.md\\:flex-col{flex-direction:column;}.md\\:items-center{align-items:center;}.md\\:justify-center{justify-content:center;}.md\\:justify-between{justify-content:space-between;}.md\\:gap-4{gap:1rem;}.md\\:border-0{border-width:0px;}.md\\:py-40{padding-top:10rem;padding-bottom:10rem;}.md\\:py-52{padding-top:13rem;padding-bottom:13rem;}.md\\:pl-5{padding-left:1.25rem;}.md\\:pr-0{padding-right:0px;}.md\\:pl-20{padding-left:5rem;}.md\\:pt-24{padding-top:6rem;}.md\\:text-right{text-align:right;}.md\\:text-5xl{font-size:3rem;line-height:1;}.md\\:text-2xl{font-size:1.5rem;line-height:2rem;}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem;}.md\\:text-base{font-size:1rem;line-height:1.5rem;}}@media (min-width: 1024px){.lg\\:right-24{right:6rem;}.lg\\:bottom-24{bottom:6rem;}.lg\\:w-4\\/12{width:33.333333%;}.lg\\:gap-x-28{-moz-column-gap:7rem;column-gap:7rem;}.lg\\:text-8xl{font-size:6rem;line-height:1;}.lg\\:text-7xl{font-size:4.5rem;line-height:1;}.lg\\:text-6xl{font-size:3.75rem;line-height:1;}}@media (min-width: 1280px){.xl\\:text-9xl{font-size:8rem;line-height:1;}}@media (max-height: 450px){.small\\:hidden{display:none;}.small\\:-translate-y-10{--tw-translate-y:-2.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -730,99 +713,74 @@ module.exports = function (url, options) {
 };
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Regular.44e1802.woff2";
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Regular.d52adf8.woff";
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Black.c23823d.woff2";
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Black.7192afc.woff";
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Bold.9a5c23d.woff2";
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Plain-Bold.87bfd11.woff";
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FsMenu_vue_vue_type_style_index_0_id_142c92d0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FsMenu_vue_vue_type_style_index_0_id_142c92d0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FsMenu_vue_vue_type_style_index_0_id_142c92d0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FsMenu_vue_vue_type_style_index_0_id_142c92d0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FsMenu_vue_vue_type_style_index_0_id_142c92d0_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Menus_vue_vue_type_style_index_0_id_9b5ea124_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Menus_vue_vue_type_style_index_0_id_9b5ea124_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Menus_vue_vue_type_style_index_0_id_9b5ea124_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Menus_vue_vue_type_style_index_0_id_9b5ea124_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Menus_vue_vue_type_style_index_0_id_9b5ea124_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".button-side-menu.active span[data-v-9b5ea124]:first-child{transform:translateY(8px) rotate(45deg)}.button-side-menu.active span[data-v-9b5ea124]:first-child:before{transform:none}.button-side-menu.active span[data-v-9b5ea124]:nth-child(2){transform:translateX(-100%);opacity:0}.button-side-menu.active span[data-v-9b5ea124]:nth-child(3){transform:translateY(-8px) rotate(-45deg)}.button-side-menu.active span[data-v-9b5ea124]:nth-child(3):before{transform:none}.fs-menu.active[data-v-9b5ea124]{pointer-events:auto}.fs-menu .nuxt-link-exact-active[data-v-9b5ea124]{pointer-events:none}.fs-menu .nuxt-link-exact-active .span-1[data-v-9b5ea124]{opacity:0;transform:translateY(-4rem)}.fs-menu .nuxt-link-exact-active .span-2[data-v-9b5ea124]{opacity:1;transform:translateY(-4rem)}", ""]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {};
+module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
 /* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".active[data-v-142c92d0]{transform:none}", ""]);
-// Exports
-___CSS_LOADER_EXPORT___.locals = {};
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SideMenu_vue_vue_type_style_index_0_id_c8d9696e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SideMenu_vue_vue_type_style_index_0_id_c8d9696e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SideMenu_vue_vue_type_style_index_0_id_c8d9696e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SideMenu_vue_vue_type_style_index_0_id_c8d9696e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_nuxt_postcss8_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_nuxt_postcss8_node_modules_postcss_loader_dist_cjs_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_sass_resources_loader_lib_loader_js_ref_7_oneOf_1_4_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_SideMenu_vue_vue_type_style_index_0_id_c8d9696e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
-var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".active span[data-v-c8d9696e]:first-child{transform:translateY(8px) rotate(45deg)}.active span[data-v-c8d9696e]:first-child:before{transform:none}.active span[data-v-c8d9696e]:nth-child(2){transform:translateX(-100%);opacity:0}.active span[data-v-c8d9696e]:nth-child(3){transform:translateY(-8px) rotate(-45deg)}.active span[data-v-c8d9696e]:nth-child(3):before{transform:none}", ""]);
-// Exports
-___CSS_LOADER_EXPORT___.locals = {};
-module.exports = ___CSS_LOADER_EXPORT___;
-
-
-/***/ }),
-/* 36 */
 /***/ (function(module, exports) {
 
 // This file is intentionally left empty for noop aliases
 
 /***/ }),
-/* 37 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -832,25 +790,24 @@ __webpack_require__.r(__webpack_exports__);
 // NAMESPACE OBJECT: ./.nuxt/components/index.js
 var components_namespaceObject = {};
 __webpack_require__.r(components_namespaceObject);
-__webpack_require__.d(components_namespaceObject, "FsMenu", function() { return FsMenu; });
-__webpack_require__.d(components_namespaceObject, "SideMenu", function() { return SideMenu; });
-__webpack_require__.d(components_namespaceObject, "LogosSenzHorizontal", function() { return LogosSenzHorizontal; });
-__webpack_require__.d(components_namespaceObject, "LogosSenzVertical", function() { return LogosSenzVertical; });
+__webpack_require__.d(components_namespaceObject, "Menus", function() { return Menus; });
 __webpack_require__.d(components_namespaceObject, "ButtonsArrowDown", function() { return ButtonsArrowDown; });
 __webpack_require__.d(components_namespaceObject, "ButtonsCircleArrowRight", function() { return ButtonsCircleArrowRight; });
 __webpack_require__.d(components_namespaceObject, "ButtonsFollowMouse", function() { return ButtonsFollowMouse; });
 __webpack_require__.d(components_namespaceObject, "Footer", function() { return Footer; });
 __webpack_require__.d(components_namespaceObject, "FooterTwoBlocks", function() { return FooterTwoBlocks; });
+__webpack_require__.d(components_namespaceObject, "LogosSenzHorizontal", function() { return LogosSenzHorizontal; });
+__webpack_require__.d(components_namespaceObject, "LogosSenzVertical", function() { return LogosSenzVertical; });
 
 // EXTERNAL MODULE: external "vue"
 var external_vue_ = __webpack_require__(0);
 var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
 
 // EXTERNAL MODULE: external "ufo"
-var external_ufo_ = __webpack_require__(2);
+var external_ufo_ = __webpack_require__(1);
 
 // EXTERNAL MODULE: external "node-fetch"
-var external_node_fetch_ = __webpack_require__(13);
+var external_node_fetch_ = __webpack_require__(12);
 var external_node_fetch_default = /*#__PURE__*/__webpack_require__.n(external_node_fetch_);
 
 // CONCATENATED MODULE: ./.nuxt/middleware.js
@@ -1362,7 +1319,7 @@ function tokensToFunction(tokens, options) {
 
   for (let i = 0; i < tokens.length; i++) {
     if (typeof tokens[i] === 'object') {
-      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options));
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', utils_flags(options));
     }
   }
 
@@ -1442,7 +1399,7 @@ function tokensToFunction(tokens, options) {
  */
 
 
-function flags(options) {
+function utils_flags(options) {
   return options && options.sensitive ? '' : 'i';
 }
 
@@ -1529,7 +1486,7 @@ async function serverPrefetch() {
 
 });
 // EXTERNAL MODULE: external "vue-meta"
-var external_vue_meta_ = __webpack_require__(14);
+var external_vue_meta_ = __webpack_require__(13);
 var external_vue_meta_default = /*#__PURE__*/__webpack_require__.n(external_vue_meta_);
 
 // EXTERNAL MODULE: external "vue-client-only"
@@ -1621,17 +1578,17 @@ function shouldScrollToTop(route) {
 
 
 
-const _0bea9cba = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 3).then(__webpack_require__.bind(null, 61)));
+const _0bea9cba = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 2).then(__webpack_require__.bind(null, 57)));
 
-const _8399aae6 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 4).then(__webpack_require__.bind(null, 62)));
+const _8399aae6 = () => interopDefault(__webpack_require__.e(/* import() | pages/contact */ 3).then(__webpack_require__.bind(null, 58)));
 
-const _1099d646 = () => interopDefault(__webpack_require__.e(/* import() | pages/projects */ 6).then(__webpack_require__.bind(null, 63)));
+const _1099d646 = () => interopDefault(__webpack_require__.e(/* import() | pages/projects */ 5).then(__webpack_require__.bind(null, 59)));
 
-const _55af0a7e = () => interopDefault(__webpack_require__.e(/* import() | pages/services */ 7).then(__webpack_require__.bind(null, 64)));
+const _000adf7e = () => interopDefault(__webpack_require__.e(/* import() | pages/projects/lp-fitness */ 6).then(__webpack_require__.bind(null, 60)));
 
-const _2ba2777f = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 5).then(__webpack_require__.bind(null, 65)));
+const _55af0a7e = () => interopDefault(__webpack_require__.e(/* import() | pages/services */ 7).then(__webpack_require__.bind(null, 61)));
 
-const _d140f210 = () => interopDefault(__webpack_require__.e(/* import() | pages/_projects/lp-fitness */ 2).then(__webpack_require__.bind(null, 66)));
+const _2ba2777f = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 4).then(__webpack_require__.bind(null, 62)));
 
 const emptyFn = () => {};
 
@@ -1653,7 +1610,12 @@ const routerOptions = {
   }, {
     path: "/projects",
     component: _1099d646,
-    name: "Projects"
+    name: "Projects",
+    children: [{
+      path: "lp-fitness",
+      component: _000adf7e,
+      name: "LP Fitness"
+    }]
   }, {
     path: "/services",
     component: _55af0a7e,
@@ -1662,10 +1624,6 @@ const routerOptions = {
     path: "/",
     component: _2ba2777f,
     name: "Home"
-  }, {
-    path: "/:projects/lp-fitness",
-    component: _d140f210,
-    name: "LP Fitness"
   }],
   fallback: false
 };
@@ -1840,7 +1798,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./.nuxt/components/nuxt-error.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_nuxt_errorvue_type_script_lang_js_ = (nuxt_errorvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./.nuxt/components/nuxt-error.vue
 
@@ -1848,7 +1806,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(19)
+  var style0 = __webpack_require__(18)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -2152,7 +2110,7 @@ var nuxt_loading_render, nuxt_loading_staticRenderFns
 
 function nuxt_loading_injectStyles (context) {
   
-  var style0 = __webpack_require__(21)
+  var style0 = __webpack_require__(20)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -2172,17 +2130,16 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var nuxt_loading = (nuxt_loading_component.exports);
 // EXTERNAL MODULE: ./assets/scss/main.scss
-var main = __webpack_require__(23);
+var main = __webpack_require__(22);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=5d8c956a&
-var defaultvue_type_template_id_5d8c956a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('FsMenu'),_vm._ssrNode(" "),_c('SideMenu'),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"body-wrapper\">","</div>",[_vm._ssrNode("<div class=\"fixed top-0 left-0 z-20 block w-full h-full transition-all duration-300 bg-black pointer-events-none overlay opacity-0 will-change-[opacity]\"></div> "),_c('Nuxt',{staticClass:"relative main-container"}),_vm._ssrNode(" "),_c('Footer')],2),_vm._ssrNode(" "),_c('ButtonsFollowMouse')],2)}
-var defaultvue_type_template_id_5d8c956a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=18e24082&
+var defaultvue_type_template_id_18e24082_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('Menus'),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"body-wrapper\">","</div>",[_vm._ssrNode("<div class=\"fixed top-0 left-0 z-20 block w-full h-full transition-all duration-300 bg-black pointer-events-none overlay opacity-0 will-change-[opacity]\"></div> "),_c('Nuxt',{staticClass:"relative main-container"}),_vm._ssrNode(" "),_c('Footer')],2),_vm._ssrNode(" "),(_vm.$device.isDesktop)?_c('ButtonsFollowMouse'):_vm._e()],2)}
+var defaultvue_type_template_id_18e24082_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=5d8c956a&
+// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=18e24082&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -2219,8 +2176,8 @@ function default_injectStyles (context) {
 
 var default_component = Object(componentNormalizer["a" /* default */])(
   layouts_defaultvue_type_script_lang_js_,
-  defaultvue_type_template_id_5d8c956a_render,
-  defaultvue_type_template_id_5d8c956a_staticRenderFns,
+  defaultvue_type_template_id_18e24082_render,
+  defaultvue_type_template_id_18e24082_staticRenderFns,
   false,
   default_injectStyles,
   null,
@@ -2231,7 +2188,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var layouts_default = (default_component.exports);
 
 /* nuxt-component-imports */
-installComponents(default_component, {FsMenu: __webpack_require__(38).default,SideMenu: __webpack_require__(39).default,Footer: __webpack_require__(40).default,ButtonsFollowMouse: __webpack_require__(42).default})
+installComponents(default_component, {Menus: __webpack_require__(35).default,Footer: __webpack_require__(36).default,ButtonsFollowMouse: __webpack_require__(38).default})
 
 // CONCATENATED MODULE: ./.nuxt/App.js
 
@@ -2485,15 +2442,14 @@ const layouts = {
   }
 });
 // CONCATENATED MODULE: ./.nuxt/components/index.js
-const FsMenu = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 38)).then(c => wrapFunctional(c.default || c));
-const SideMenu = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 39)).then(c => wrapFunctional(c.default || c));
-const LogosSenzHorizontal = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 44)).then(c => wrapFunctional(c.default || c));
-const LogosSenzVertical = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 43)).then(c => wrapFunctional(c.default || c));
-const ButtonsArrowDown = () => __webpack_require__.e(/* import() | components/buttons-arrow-down */ 1).then(__webpack_require__.bind(null, 52)).then(c => wrapFunctional(c.default || c));
-const ButtonsCircleArrowRight = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 45)).then(c => wrapFunctional(c.default || c));
-const ButtonsFollowMouse = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 42)).then(c => wrapFunctional(c.default || c));
-const Footer = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 40)).then(c => wrapFunctional(c.default || c));
-const FooterTwoBlocks = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 41)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
+const Menus = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 35)).then(c => wrapFunctional(c.default || c));
+const ButtonsArrowDown = () => __webpack_require__.e(/* import() | components/buttons-arrow-down */ 1).then(__webpack_require__.bind(null, 48)).then(c => wrapFunctional(c.default || c));
+const ButtonsCircleArrowRight = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 41)).then(c => wrapFunctional(c.default || c));
+const ButtonsFollowMouse = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 38)).then(c => wrapFunctional(c.default || c));
+const Footer = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 36)).then(c => wrapFunctional(c.default || c));
+const FooterTwoBlocks = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 37)).then(c => wrapFunctional(c.default || c));
+const LogosSenzHorizontal = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 40)).then(c => wrapFunctional(c.default || c));
+const LogosSenzVertical = () => Promise.resolve(/* import() */).then(__webpack_require__.bind(null, 39)).then(c => wrapFunctional(c.default || c)); // nuxt/nuxt.js#8607
 
 function wrapFunctional(options) {
   if (!options || !options.functional) {
@@ -2533,8 +2489,206 @@ for (const name in components_namespaceObject) {
   external_vue_default.a.component('Lazy' + name, components_namespaceObject[name]);
 }
 // EXTERNAL MODULE: ./.nuxt/empty.js
-var _nuxt_empty = __webpack_require__(36);
+var _nuxt_empty = __webpack_require__(33);
 
+// CONCATENATED MODULE: ./.nuxt/device.plugin.js
+ // eslint-disable-next-line
+
+const REGEX_MOBILE1 = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|FBAN|FBAV|fennec|hiptop|iemobile|ip(hone|od)|Instagram|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i; // eslint-disable-next-line
+
+const REGEX_MOBILE2 = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;
+
+function isMobile(a) {
+  return REGEX_MOBILE1.test(a) || REGEX_MOBILE2.test(a.substr(0, 4));
+} // eslint-disable-next-line
+
+
+const REGEX_MOBILE_OR_TABLET1 = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|FBAN|FBAV|fennec|hiptop|iemobile|ip(hone|od)|Instagram|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i; // eslint-disable-next-line
+
+const REGEX_MOBILE_OR_TABLET2 = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i; // eslint-disable-next-line
+
+const REGEX_CRAWLER = /Googlebot\/|Googlebot-Mobile|Googlebot-Image|Googlebot-News|Googlebot-Video|AdsBot-Google([^-]|$)|AdsBot-Google-Mobile|Feedfetcher-Google|Mediapartners-Google|Mediapartners \(Googlebot\)|APIs-Google|bingbot|Slurp|[wW]get|LinkedInBot|Python-urllib|python-requests|aiohttp|httpx|libwww-perl|httpunit|nutch|Go-http-client|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|BIGLOTRON|Teoma|convera|seekbot|Gigabot|Gigablast|exabot|ia_archiver|GingerCrawler|webmon |HTTrack|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|findlink|msrbot|panscient|yacybot|AISearchBot|ips-agent|tagoobot|MJ12bot|woriobot|yanga|buzzbot|mlbot|YandexBot|YandexImages|YandexAccessibilityBot|YandexMobileBot|YandexMetrika|YandexTurbo|YandexImageResizer|YandexVideo|YandexAdNet|YandexBlogs|YandexCalendar|YandexDirect|YandexFavicons|YaDirectFetcher|YandexForDomain|YandexMarket|YandexMedia|YandexMobileScreenShotBot|YandexNews|YandexOntoDB|YandexPagechecker|YandexPartner|YandexRCA|YandexSearchShop|YandexSitelinks|YandexSpravBot|YandexTracker|YandexVertis|YandexVerticals|YandexWebmaster|YandexScreenshotBot|purebot|Linguee Bot|CyberPatrol|voilabot|Baiduspider|citeseerxbot|spbot|twengabot|postrank|TurnitinBot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|Ahrefs(Bot|SiteAudit)|fuelbot|CrunchBot|IndeedBot|mappydata|woobot|ZoominfoBot|PrivacyAwareBot|Multiviewbot|SWIMGBot|Grobbot|eright|Apercite|semanticbot|Aboundex|domaincrawler|wbsearchbot|summify|CCBot|edisterbot|seznambot|ec2linkfinder|gslfbot|aiHitBot|intelium_bot|facebookexternalhit|Yeti|RetrevoPageAnalyzer|lb-spider|Sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|OrangeBot\/|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|S[eE][mM]rushBot|yoozBot|lipperhey|Y!J|Domain Re-Animator Bot|AddThis|Screaming Frog SEO Spider|MetaURI|Scrapy|Livelap[bB]ot|OpenHoseBot|CapsuleChecker|collection@infegy.com|IstellaBot|DeuSu\/|betaBot|Cliqzbot\/|MojeekBot\/|netEstate NE Crawler|SafeSearch microdata crawler|Gluten Free Crawler\/|Sonic|Sysomos|Trove|deadlinkchecker|Slack-ImgProxy|Embedly|RankActiveLinkBot|iskanie|SafeDNSBot|SkypeUriPreview|Veoozbot|Slackbot|redditbot|datagnionbot|Google-Adwords-Instant|adbeat_bot|WhatsApp|contxbot|pinterest.com.bot|electricmonk|GarlikCrawler|BingPreview\/|vebidoobot|FemtosearchBot|Yahoo Link Preview|MetaJobBot|DomainStatsBot|mindUpBot|Daum\/|Jugendschutzprogramm-Crawler|Xenu Link Sleuth|Pcore-HTTP|moatbot|KosmioBot|pingdom|AppInsights|PhantomJS|Gowikibot|PiplBot|Discordbot|TelegramBot|Jetslide|newsharecounts|James BOT|Bark[rR]owler|TinEye|SocialRankIOBot|trendictionbot|Ocarinabot|epicbot|Primalbot|DuckDuckGo-Favicons-Bot|GnowitNewsbot|Leikibot|LinkArchiver|YaK\/|PaperLiBot|Digg Deeper|dcrawl|Snacktory|AndersPinkBot|Fyrebot|EveryoneSocialBot|Mediatoolkitbot|Luminator-robots|ExtLinksBot|SurveyBot|NING\/|okhttp|Nuzzel|omgili|PocketParser|YisouSpider|um-LN|ToutiaoSpider|MuckRack|Jamie's Spider|AHC\/|NetcraftSurveyAgent|Laserlikebot|^Apache-HttpClient|AppEngine-Google|Jetty|Upflow|Thinklab|Traackr.com|Twurly|Mastodon|http_get|DnyzBot|botify|007ac9 Crawler|BehloolBot|BrandVerity|check_http|BDCbot|ZumBot|EZID|ICC-Crawler|ArchiveBot|^LCC |filterdb.iss.net\/crawler|BLP_bbot|BomboraBot|Buck\/|Companybook-Crawler|Genieo|magpie-crawler|MeltwaterNews|Moreover|newspaper\/|ScoutJet|(^| )sentry\/|StorygizeBot|UptimeRobot|OutclicksBot|seoscanners|Hatena|Google Web Preview|MauiBot|AlphaBot|SBL-BOT|IAS crawler|adscanner|Netvibes|acapbot|Baidu-YunGuanCe|bitlybot|blogmuraBot|Bot.AraTurka.com|bot-pge.chlooe.com|BoxcarBot|BTWebClient|ContextAd Bot|Digincore bot|Disqus|Feedly|Fetch\/|Fever|Flamingo_SearchEngine|FlipboardProxy|g2reader-bot|G2 Web Services|imrbot|K7MLWCBot|Kemvibot|Landau-Media-Spider|linkapediabot|vkShare|Siteimprove.com|BLEXBot\/|DareBoost|ZuperlistBot\/|Miniflux\/|Feedspot|Diffbot\/|SEOkicks|tracemyfile|Nimbostratus-Bot|zgrab|PR-CY.RU|AdsTxtCrawler|Datafeedwatch|Zabbix|TangibleeBot|google-xrawler|axios|Amazon CloudFront|Pulsepoint|CloudFlare-AlwaysOnline|Google-Structured-Data-Testing-Tool|WordupInfoSearch|WebDataStats|HttpUrlConnection|Seekport Crawler|ZoomBot|VelenPublicWebCrawler|MoodleBot|jpg-newsbot|outbrain|W3C_Validator|Validator\.nu|W3C-checklink|W3C-mobileOK|W3C_I18n-Checker|FeedValidator|W3C_CSS_Validator|W3C_Unicorn|Google-PhysicalWeb|Blackboard|ICBot\/|BazQux|Twingly|Rivva|Experibot|awesomecrawler|Dataprovider.com|GroupHigh\/|theoldreader.com|AnyEvent|Uptimebot\.org|Nmap Scripting Engine|2ip.ru|Clickagy|Caliperbot|MBCrawler|online-webceo-bot|B2B Bot|AddSearchBot|Google Favicon|HubSpot|Chrome-Lighthouse|HeadlessChrome|CheckMarkNetwork\/|www\.uptime\.com|Streamline3Bot\/|serpstatbot\/|MixnodeCache\/|^curl|SimpleScraper|RSSingBot|Jooblebot|fedoraplanet|Friendica|NextCloud|Tiny Tiny RSS|RegionStuttgartBot|Bytespider|Datanyze|Google-Site-Verification|TrendsmapResolver|tweetedtimes|NTENTbot|Gwene|SimplePie|SearchAtlas|Superfeedr|feedbot|UT-Dorkbot|Amazonbot|SerendeputyBot|Eyeotabot|officestorebot|Neticle Crawler|SurdotlyBot|LinkisBot|AwarioSmartBot|AwarioRssBot|RyteBot|FreeWebMonitoring SiteChecker|AspiegelBot|NAVER Blog Rssbot|zenback bot|SentiBot|Domains Project\/|Pandalytics|VKRobot|bidswitchbot|tigerbot|NIXStatsbot|Atom Feed Robot|Curebot|PagePeeker\/|Vigil\/|rssbot\/|startmebot\/|JobboerseBot|seewithkids|NINJA bot|Cutbot|BublupBot|BrandONbot|RidderBot|Taboolabot|Dubbotbot|FindITAnswersbot|infoobot|Refindbot|BlogTraffic\/\d\.\d+ Feed-Fetcher|SeobilityBot|Cincraw|Dragonbot|VoluumDSP-content-bot|FreshRSS|BitBot|^PHP-Curl-Class|Google-Certificates-Bridge/;
+
+function isMobileOrTablet(a) {
+  return REGEX_MOBILE_OR_TABLET1.test(a) || REGEX_MOBILE_OR_TABLET2.test(a.substr(0, 4));
+}
+
+function isIos(a) {
+  return /iPad|iPhone|iPod/.test(a);
+}
+
+function isAndroid(a) {
+  return /android/i.test(a);
+}
+
+function isWindows(a) {
+  return /Windows/.test(a);
+}
+
+function isMacOS(a) {
+  return /Mac OS X/.test(a);
+} // Following regular expressions are originated from bowser(https://github.com/lancedikson/bowser).
+// Copyright 2015, Dustin Diaz (the "Original Author")
+// https://github.com/lancedikson/bowser/blob/master/LICENSE
+
+
+const browsers = [{
+  name: 'Samsung',
+  test: /SamsungBrowser/i
+}, {
+  name: 'Edge',
+  test: /edg([ea]|ios|)\//i
+}, {
+  name: 'Firefox',
+  test: /firefox|iceweasel|fxios/i
+}, {
+  name: 'Chrome',
+  test: /chrome|crios|crmo/i
+}, {
+  name: 'Safari',
+  test: /safari|applewebkit/i
+}];
+
+function getBrowserName(a) {
+  for (let b of browsers) {
+    if (b.test.test(a)) {
+      return b.name;
+    }
+  }
+
+  return null;
+}
+
+const DEFAULT_USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.39 Safari/537.36';
+const REFRESH_ON_RESIZE = false;
+
+function extractDevices(ctx, userAgent = DEFAULT_USER_AGENT) {
+  let mobile = null;
+  let mobileOrTablet = null;
+  let ios = null;
+  let android = null;
+
+  if (userAgent === 'Amazon CloudFront') {
+    if (ctx.req.headers['cloudfront-is-mobile-viewer'] === 'true') {
+      mobile = true;
+      mobileOrTablet = true;
+    }
+
+    if (ctx.req.headers['cloudfront-is-tablet-viewer'] === 'true') {
+      mobile = false;
+      mobileOrTablet = true;
+    }
+  } else if (ctx.req && ctx.req.headers['cf-device-type']) {
+    // Cloudflare
+    switch (ctx.req.headers['cf-device-type']) {
+      case 'mobile':
+        mobile = true;
+        mobileOrTablet = true;
+        break;
+
+      case 'tablet':
+        mobile = false;
+        mobileOrTablet = true;
+        break;
+
+      case 'desktop':
+        mobile = false;
+        mobileOrTablet = false;
+        break;
+    }
+  } else {
+    mobile = isMobile(userAgent);
+    mobileOrTablet = isMobileOrTablet(userAgent);
+    ios = isIos(userAgent);
+    android = isAndroid(userAgent);
+  }
+
+  const windows = isWindows(userAgent);
+  const macOS = isMacOS(userAgent);
+  const browserName = getBrowserName(userAgent);
+  const isSafari = browserName === 'Safari';
+  const isFirefox = browserName === 'Firefox';
+  const isEdge = browserName === 'Edge';
+  const isChrome = browserName === 'Chrome';
+  const isSamsung = browserName === 'Samsung';
+  const isCrawler = REGEX_CRAWLER.test(userAgent);
+  return {
+    mobile,
+    mobileOrTablet,
+    ios,
+    android,
+    windows,
+    macOS,
+    isSafari,
+    isFirefox,
+    isEdge,
+    isChrome,
+    isSamsung,
+    isCrawler
+  };
+}
+
+/* harmony default export */ var device_plugin = (async function (ctx, inject) {
+  const makeFlags = () => {
+    let userAgent = '';
+
+    if (typeof ctx.req !== 'undefined') {
+      userAgent = ctx.req.headers['user-agent'];
+    } else if (typeof navigator !== 'undefined') {
+      userAgent = navigator.userAgent;
+    }
+
+    const {
+      mobile,
+      mobileOrTablet,
+      ios,
+      android,
+      windows,
+      macOS,
+      isSafari,
+      isFirefox,
+      isEdge,
+      isChrome,
+      isSamsung,
+      isCrawler
+    } = extractDevices(ctx, userAgent);
+    return {
+      userAgent,
+      isMobile: mobile,
+      isMobileOrTablet: mobileOrTablet,
+      isTablet: !mobile && mobileOrTablet,
+      isDesktop: !mobileOrTablet,
+      isIos: ios,
+      isAndroid: android,
+      isWindows: windows,
+      isMacOS: macOS,
+      isDesktopOrTablet: !mobile,
+      isSafari,
+      isFirefox,
+      isEdge,
+      isChrome,
+      isSamsung,
+      isCrawler
+    };
+  };
+
+  const flags = makeFlags(ctx);
+
+  if (REFRESH_ON_RESIZE && typeof window !== 'undefined') {
+    inject('device', external_vue_default.a.observable(flags));
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        const newFlags = makeFlags(ctx);
+
+        for (let key in newFlags) {
+          ctx.$device[key] = newFlags[key];
+        }
+      }, 50);
+    });
+  } else {
+    inject('device', flags);
+  }
+});
 // EXTERNAL MODULE: external "gsap"
 var external_gsap_ = __webpack_require__(3);
 
@@ -2572,14 +2726,17 @@ external_vue_default.a.directive('gsap', (el, binding) => {
   if (false) {}
 });
 // CONCATENATED MODULE: ./plugins/global.js
-/* harmony default export */ var plugins_global = (({
-  app
-}, inject) => {
-  inject('setBodyClass', string => {
-    let body = document.body;
-    body.classList.toggle('menu-is-open');
-  });
-});
+
+const mixin = {
+  methods: {
+    setBodyClass() {
+      let body = document.body;
+      body.classList.toggle('menu-is-open');
+    }
+
+  }
+};
+external_vue_default.a.mixin(mixin);
 // CONCATENATED MODULE: ./.nuxt/index.js
 
 
@@ -2596,6 +2753,8 @@ external_vue_default.a.directive('gsap', (el, binding) => {
  // Source: ./components/plugin.js (mode: 'all')
 
  // Source: ./vue-scrollto.js (mode: 'client')
+
+ // Source: ./device.plugin.js (mode: 'all')
 
  // Source: ./gsapModule.js (mode: 'all')
 
@@ -2835,12 +2994,16 @@ async function createApp(ssrContext, config = {}) {
 
   if (false) {}
 
+  if (typeof device_plugin === 'function') {
+    await device_plugin(app.context, inject);
+  }
+
   if (typeof gsapModule === 'function') {
     await gsapModule(app.context, inject);
   }
 
-  if (typeof plugins_global === 'function') {
-    await plugins_global(app.context, inject);
+  if (typeof /* Cannot get final name for export "default" in "./plugins/global.js" (known exports: , known reexports: ) */ undefined === 'function') {
+    await /* Cannot get final name for export "default" in "./plugins/global.js" (known exports: , known reexports: ) */ undefined(app.context, inject);
   } // Lock enablePreview in context
 
 
@@ -3209,21 +3372,21 @@ const createNext = ssrContext => opts => {
 });
 
 /***/ }),
-/* 38 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/FsMenu.vue?vue&type=template&id=142c92d0&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<section"+(_vm._ssrClass("fixed left-0 z-40 block w-[calc(100vw-80px)] md:w-[600px] h-screen py-32 pl-7 md:pl-5 text-black transition-all duration-500 bg-white top-o will-change-transform -translate-x-full",{ active: _vm.isOpen }))+" data-v-142c92d0>","</section>",[_vm._ssrNode("<div class=\"flex items-center w-full h-full md:justify-center\" data-v-142c92d0>","</div>",[_vm._ssrNode("<div class=\"flex\" data-v-142c92d0>","</div>",[_vm._ssrNode("<div class=\"block\" data-v-142c92d0>","</div>",[_vm._ssrNode("<p class=\"block mb-6 md:mb-10 text-zinc-400\" data-v-142c92d0>\n\t\t\t\t\t\tMenu\n\t\t\t\t\t</p> "),_vm._ssrNode("<nav data-v-142c92d0>","</nav>",[_vm._ssrNode("<ul data-v-142c92d0>","</ul>",_vm._l((_vm.menu),function(item,i){return _vm._ssrNode("<li class=\"mb-5 text-4xl font-bold text-black menu-link md:mb-7 md:text-5xl\" data-v-142c92d0>","</li>",[_c('NuxtLink',{ref:"menu",refInFor:true,staticClass:"transition-all duration-300",attrs:{"to":{name:item.link}}},[_vm._v(_vm._s(item.name))])],1)}),0)])],2)])])])])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Menus.vue?vue&type=template&id=9b5ea124&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<section"+(_vm._ssrClass("fs-menu fixed left-0 z-40 block w-[calc(100vw-80px)] md:w-[600px] h-screen py-32 pl-7 md:pl-5 text-black bg-white top-o will-change-transform -translate-x-full pointer-events-none",{ active: _vm.isOpen }))+" data-v-9b5ea124>","</section>",[_vm._ssrNode("<div class=\"flex items-center w-full h-full md:justify-center\" data-v-9b5ea124>","</div>",[_vm._ssrNode("<div class=\"flex\" data-v-9b5ea124>","</div>",[_vm._ssrNode("<div class=\"block\" data-v-9b5ea124>","</div>",[_vm._ssrNode("<p class=\"block mb-6 md:mb-10 text-zinc-400\" data-v-9b5ea124>\n\t\t\t\t\t\tMenu\n\t\t\t\t\t</p> "),_vm._ssrNode("<nav data-v-9b5ea124>","</nav>",[_vm._ssrNode("<ul data-v-9b5ea124>","</ul>",_vm._l((_vm.menu),function(item,i){return _vm._ssrNode("<li class=\"mb-4 text-4xl font-bold text-black menu-link md:mb-6 md:text-5xl\" data-v-9b5ea124>","</li>",[_c('NuxtLink',{staticClass:"relative inline-block py-1 overflow-hidden group",attrs:{"to":{name:item.link}}},[_c('span',{ref:"menuText",refInFor:true,staticClass:"relative block transition-all duration-300 span-1 group-hover:-translate-y-16 group-hover:opacity-0"},[_vm._v(_vm._s(item.name))]),_c('span',{staticClass:"absolute left-0 text-blue-600 transition-all duration-300 opacity-0 span-2 top-16 group-hover:top-0 group-hover:opacity-100"},[_vm._v(_vm._s(item.name))])])],1)}),0)])],2)])])]),_vm._ssrNode(" "),_vm._ssrNode("<section class=\"absolute z-50 w-full pl-6 pr-6 mx-auto mt-5 md:fixed md:items-center md:justify-between md:flex md:pr-0 md:w-auto md:flex-col md:h-screen mix-blend-difference md:mx-0 md:mt-0\" data-v-9b5ea124>","</section>",[_c('NuxtLink',{staticClass:"inline-block float-left w-24 h-auto md:mt-5 md:w-10 md:float-none md:block",attrs:{"to":{ name: 'Home' }}},[_c('LogosSenzVertical',{staticClass:"hidden text-white transition-all duration-300 md:block hover:text-zinc-400"}),_vm._v(" "),_c('LogosSenzHorizontal',{staticClass:"block text-white transition-all duration-300 md:hidden hover:text-zinc-400"})],1),_vm._ssrNode(" <button"+(_vm._ssrClass("fixed inline-block w-8 p-0 cursor-pointer top-4 md:-top-auto right-6 md:right-auto md:relative md:-translate-y-20 small:-translate-y-10 md:mx-auto open-fs-menu group button-side-menu",{ active: _vm.isOpen }))+" data-v-9b5ea124><span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 rounded will-change-transform transition-all duration-300\" data-v-9b5ea124></span> <span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-100 rounded will-change-transform transition-all duration-300\" data-v-9b5ea124></span> <span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-200 rounded will-change-transform transition-all duration-300\" data-v-9b5ea124></span></button> <a href=\"mailto:hello@senzdsn.com\" class=\"hidden w-0 mb-5 transition-all duration-300 -rotate-90 small:hidden text-zinc-400 md:inline-block hover:text-white\" data-v-9b5ea124>hello@senzdsn.com</a>")],2)],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./components/FsMenu.vue?vue&type=template&id=142c92d0&scoped=true&
+// CONCATENATED MODULE: ./components/Menus.vue?vue&type=template&id=9b5ea124&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/FsMenu.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Menus.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -3271,12 +3434,7 @@ var staticRenderFns = []
 //
 //
 //
-//
-//
-//
-//
-//
-/* harmony default export */ var FsMenuvue_type_script_lang_js_ = ({
+/* harmony default export */ var Menusvue_type_script_lang_js_ = ({
   data() {
     return {
       isOpen: false,
@@ -3302,38 +3460,51 @@ var staticRenderFns = []
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
-      this.$parent.$emit('isActive');
-      this.$setBodyClass();
+      this.setBodyClass();
+      this.animateFs();
     },
 
-    animateMenuItem() {//const menuLink = this.$refs.menu;
-      //let hover = this.$gsap.to(menuLink, { autoAlpha: 0 });
-      //menuLink.addEventListener("mouseenter", () => hover.play());
+    animateFs() {
+      this.tl.reversed(!this.tl.reversed());
     }
 
   },
-
-  mounted() {
-    //this.animateMenuItem()
-    var that = this;
-    this.$parent.$on('isOpen', function () {
-      that.isOpen = !that.isOpen;
-    });
+  mounted: function () {
+    let fsmenu = this.$refs.fsMenu;
+    let fsmenuTitle = this.$refs.menuTitle;
+    let fsmenuLink = this.$refs.menuLink;
+    this.tl = this.$gsap.timeline({
+      paused: true
+    }).to(fsmenu, {
+      x: 0
+    }).fromTo(fsmenuTitle, {
+      autoAlpha: 0,
+      y: 10
+    }, {
+      autoAlpha: 1,
+      y: 0
+    }, .1).fromTo(fsmenuLink, {
+      autoAlpha: 0,
+      y: 30
+    }, {
+      autoAlpha: 1,
+      y: 0,
+      stagger: .1
+    }, .2).reverse();
   }
-
 });
-// CONCATENATED MODULE: ./components/FsMenu.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_FsMenuvue_type_script_lang_js_ = (FsMenuvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/Menus.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Menusvue_type_script_lang_js_ = (Menusvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
-// CONCATENATED MODULE: ./components/FsMenu.vue
+// CONCATENATED MODULE: ./components/Menus.vue
 
 
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(32)
+  var style0 = __webpack_require__(31)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -3341,118 +3512,24 @@ if (style0.__inject__) style0.__inject__(context)
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_FsMenuvue_type_script_lang_js_,
+  components_Menusvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
   injectStyles,
-  "142c92d0",
-  "89825d34"
+  "9b5ea124",
+  "73c38a4a"
   
 )
 
-/* harmony default export */ var FsMenu = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 39 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SideMenu.vue?vue&type=template&id=c8d9696e&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<div class=\"absolute z-50 w-full pl-6 pr-6 mx-auto mt-5 md:fixed md:items-center md:justify-between md:flex md:pr-0 md:w-auto md:flex-col md:h-screen mix-blend-difference md:mx-0 md:mt-0\" data-v-c8d9696e>","</div>",[_c('NuxtLink',{staticClass:"inline-block float-left w-24 h-auto md:mt-5 md:w-10 md:float-none md:block",attrs:{"to":{ name: 'Home' }}},[_c('LogosSenzVertical',{staticClass:"hidden text-white md:block"}),_vm._v(" "),_c('LogosSenzHorizontal',{staticClass:"block text-white md:hidden"})],1),_vm._ssrNode(" <button"+(_vm._ssrClass("fixed inline-block w-8 p-0 cursor-pointer top-4 md:-top-auto right-6 md:right-auto md:relative md:-translate-y-20 small:-translate-y-10 md:mx-auto open-fs-menu group",{ active: _vm.isActive }))+" data-v-c8d9696e><span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 rounded will-change-transform transition-all duration-300\" data-v-c8d9696e></span> <span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-100 rounded will-change-transform transition-all duration-300\" data-v-c8d9696e></span> <span class=\"relative overflow-hidden block w-full h-[2px] bg-zinc-400 my-1.5 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:-translate-x-full before:transition-all before:duration-300 group-hover:before:translate-x-0 before:delay-200 rounded will-change-transform transition-all duration-300\" data-v-c8d9696e></span></button> <a href=\"mailto:hello@senzdsn.com\" class=\"hidden w-0 mb-5 transition-all duration-300 -rotate-90 small:hidden text-zinc-400 md:inline-block hover:text-white\" data-v-c8d9696e>hello@senzdsn.com</a>")],2)])}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./components/SideMenu.vue?vue&type=template&id=c8d9696e&scoped=true&
-
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SideMenu.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ var SideMenuvue_type_script_lang_js_ = ({
-  data() {
-    return {
-      isActive: false
-    };
-  },
-
-  methods: {
-    toggle() {
-      this.isActive = !this.isActive;
-      this.$parent.$emit('isOpen');
-      this.$setBodyClass();
-    }
-
-  },
-
-  mounted() {
-    var that = this;
-    this.$parent.$on('isActive', function () {
-      that.isActive = !that.isActive;
-    });
-  }
-
-});
-// CONCATENATED MODULE: ./components/SideMenu.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_SideMenuvue_type_script_lang_js_ = (SideMenuvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
-
-// CONCATENATED MODULE: ./components/SideMenu.vue
-
-
-
-function injectStyles (context) {
-  
-  var style0 = __webpack_require__(34)
-if (style0.__inject__) style0.__inject__(context)
-
-}
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  components_SideMenuvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  injectStyles,
-  "c8d9696e",
-  "271d3f70"
-  
-)
-
-/* harmony default export */ var SideMenu = __webpack_exports__["default"] = (component.exports);
+/* harmony default export */ var Menus = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {LogosSenzVertical: __webpack_require__(43).default,LogosSenzHorizontal: __webpack_require__(44).default})
+installComponents(component, {LogosSenzVertical: __webpack_require__(39).default,LogosSenzHorizontal: __webpack_require__(40).default})
 
 
 /***/ }),
-/* 40 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3566,7 +3643,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/footer/Footer.vue?vue&type=script&lang=js&
  /* harmony default export */ var footer_Footervue_type_script_lang_js_ = (Footervue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/footer/Footer.vue
 
@@ -3593,11 +3670,11 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var Footer = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {FooterTwoBlocks: __webpack_require__(41).default,ButtonsCircleArrowRight: __webpack_require__(45).default})
+installComponents(component, {FooterTwoBlocks: __webpack_require__(37).default,ButtonsCircleArrowRight: __webpack_require__(41).default})
 
 
 /***/ }),
-/* 41 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3612,11 +3689,11 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/footer/TwoBlocks.vue?vue&type=template&id=33ac888e&
 
 // EXTERNAL MODULE: ./assets/img/services-bg.jpg
-var services_bg = __webpack_require__(15);
+var services_bg = __webpack_require__(14);
 var services_bg_default = /*#__PURE__*/__webpack_require__.n(services_bg);
 
 // EXTERNAL MODULE: ./assets/img/projects-bg.jpg
-var projects_bg = __webpack_require__(16);
+var projects_bg = __webpack_require__(15);
 var projects_bg_default = /*#__PURE__*/__webpack_require__.n(projects_bg);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/footer/TwoBlocks.vue?vue&type=script&lang=js&
@@ -3682,7 +3759,7 @@ var projects_bg_default = /*#__PURE__*/__webpack_require__.n(projects_bg);
 // CONCATENATED MODULE: ./components/footer/TwoBlocks.vue?vue&type=script&lang=js&
  /* harmony default export */ var footer_TwoBlocksvue_type_script_lang_js_ = (TwoBlocksvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/footer/TwoBlocks.vue
 
@@ -3709,7 +3786,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var TwoBlocks = __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
-/* 42 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3848,7 +3925,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/buttons/FollowMouse.vue?vue&type=script&lang=js&
  /* harmony default export */ var buttons_FollowMousevue_type_script_lang_js_ = (FollowMousevue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/buttons/FollowMouse.vue
 
@@ -3872,7 +3949,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var FollowMouse = __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
-/* 43 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3887,7 +3964,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/logos/SenzVertical.vue?vue&type=template&id=6a200d9a&
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/logos/SenzVertical.vue
 
@@ -3910,7 +3987,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var SenzVertical = __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
-/* 44 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3925,7 +4002,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/logos/SenzHorizontal.vue?vue&type=template&id=4fd37d68&
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/logos/SenzHorizontal.vue
 
@@ -3948,7 +4025,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var SenzHorizontal = __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
-/* 45 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3963,7 +4040,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./components/buttons/CircleArrowRight.vue?vue&type=template&id=512a6603&
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(1);
+var componentNormalizer = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./components/buttons/CircleArrowRight.vue
 

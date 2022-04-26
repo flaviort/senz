@@ -1,15 +1,6 @@
 {
-  "FsMenu": {
-    "description": "Auto imported from components/FsMenu.vue"
-  },
-  "SideMenu": {
-    "description": "Auto imported from components/SideMenu.vue"
-  },
-  "LogosSenzHorizontal": {
-    "description": "Auto imported from components/logos/SenzHorizontal.vue"
-  },
-  "LogosSenzVertical": {
-    "description": "Auto imported from components/logos/SenzVertical.vue"
+  "Menus": {
+    "description": "Auto imported from components/Menus.vue"
   },
   "ButtonsArrowDown": {
     "description": "Auto imported from components/buttons/ArrowDown.vue"
@@ -25,5 +16,11 @@
   },
   "FooterTwoBlocks": {
     "description": "Auto imported from components/footer/TwoBlocks.vue"
+  },
+  "LogosSenzHorizontal": {
+    "description": "Auto imported from components/logos/SenzHorizontal.vue"
+  },
+  "LogosSenzVertical": {
+    "description": "Auto imported from components/logos/SenzVertical.vue"
   }
 }

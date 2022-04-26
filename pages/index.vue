@@ -218,11 +218,11 @@
 		},
 
 		beforeRouteLeave(from, to, next) {
-			setTimeout(() => {
+			this.$nextTick(() => {
 				this.$gsap.to('body', { clearProps: 'all', })
 				this.$ScrollTrigger.getAll().forEach(ST => ST.kill());
-			}, 10)
-			next();
+				next();
+			})
 		},
 	}
 </script>

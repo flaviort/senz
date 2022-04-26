@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/lp-fitness", {data:[{},{}],fetch:{},mutations:void 0});

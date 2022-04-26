@@ -1,8 +1,7 @@
 <template>
 	<div>
 		
-		<FsMenu />
-		<SideMenu />
+		<Menus />
 		
 		<div class="body-wrapper">
 
@@ -14,7 +13,7 @@
 
 		</div>
 
-		<ButtonsFollowMouse />
+		<ButtonsFollowMouse v-if="$device.isDesktop" />
 
 	</div>
 </template>
