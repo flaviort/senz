@@ -33,23 +33,29 @@
 		<section class="relative py-24 text-white md:pl-20 md:py-52" id="projects">
 			<div class="container-wrapper">
 				
-				<h3 class="mb-32 text-5xl font-bold sm:text-6xl lg:text-7xl md:mb-72 projects-title mix-blend-difference">
+				<h3 class="mb-20 text-5xl font-bold sm:mb-32 sm:text-6xl lg:text-7xl md:mb-72 projects-title mix-blend-difference">
 					<span>Featured</span><br />
 					<span class="text-white-shadow">projects</span>
 				</h3>
 
 				<div class="relative flex projects">
 
-					<div class="w-1/2 mix-blend-difference description pt-[25vh] relative z-2">
+					<div class="w-full md:w-1/2 description md:pt-[25vh] relative z-2 text-black">
 
-						<div class="flex items-center w-[60vw] h-screen md:w-2/3">
+						<div class="items-center w-full mb-20 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
 							<div class="project-infos-01">
 
-								<p class="text-lg sm:text-xl md:text-2xl">
+								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
+									<picture class="relative h-0 pb-[90%] w-full block">
+										<img src="~/assets/img/projects/thumb-lp-fitness.jpg" srcset="~/assets/img/projects/thumb-lp-fitness@2x.jpg 2x" alt="LP Fitness" class="absolute object-cover object-top w-full h-full">
+									</picture>
+								</NuxtLink>
+
+								<p class="text-base sm:text-xl md:text-2xl">
 									LP Fitness
 								</p>
 
-								<h2 class="block mt-4 mb-6 text-3xl font-bold md:text-4xl">
+								<h2 class="block mt-1 mb-4 text-2xl font-bold md:mt-4 md:mb-6 sm:text-3xl md:text-4xl">
 									Online couching and personal trainer
 								</h2>
 
@@ -60,14 +66,20 @@
 							</div>
 						</div>
 
-						<div class="flex items-center w-[60vw] h-screen md:w-2/3">
+						<div class="items-center w-full mb-20 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
 							<div class="project-infos-02">
 
-								<p class="text-lg sm:text-xl md:text-2xl">
+								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
+									<picture class="relative h-0 pb-[90%] w-full block">
+										<img src="~/assets/img/projects/thumb-lp-fitness.jpg" srcset="~/assets/img/projects/thumb-lp-fitness@2x.jpg 2x" alt="LP Fitness" class="absolute object-cover object-top w-full h-full">
+									</picture>
+								</NuxtLink>
+
+								<p class="text-base sm:text-xl md:text-2xl">
 									Ultra Capital
 								</p>
 
-								<h2 class="block mt-4 mb-6 text-3xl font-bold md:text-4xl">
+								<h2 class="block mt-1 mb-4 text-2xl font-bold md:mt-4 md:mb-6 sm:text-3xl md:text-4xl">
 									Lorem, ipsum dolor sit amet consectetur adipisicing
 								</h2>
 
@@ -78,14 +90,20 @@
 							</div>
 						</div>
 
-						<div class="flex items-center w-[60vw] h-screen md:w-2/3 mb-[20vh]">
+						<div class="md:flex items-center w-full md:h-screen md:w-3/4 xl:w-2/3 md:mb-[20vh] mb-20">
 							<div class="project-infos-03">
 
-								<p class="text-lg sm:text-xl md:text-2xl">
+								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
+									<picture class="relative h-0 pb-[90%] w-full block">
+										<img src="~/assets/img/projects/thumb-lp-fitness.jpg" srcset="~/assets/img/projects/thumb-lp-fitness@2x.jpg 2x" alt="LP Fitness" class="absolute object-cover object-top w-full h-full">
+									</picture>
+								</NuxtLink>
+
+								<p class="text-base sm:text-xl md:text-2xl">
 									Mender
 								</p>
 
-								<h2 class="block mt-4 mb-6 text-3xl font-bold md:text-4xl">
+								<h2 class="block mt-1 mb-4 text-2xl font-bold md:mt-4 md:mb-6 sm:text-3xl md:text-4xl">
 									Find the perfect professional for you
 								</h2>
 
@@ -98,7 +116,7 @@
 
 					</div>
 
-					<div class="project-image h-[90vh] w-5/12 overflow-hidden float-right">
+					<div class="hidden md:block project-image h-[90vh] w-1/2 xl:w-5/12 overflow-hidden float-right">
 						<div class="relative w-full h-full">
 							
 							<div class="absolute top-0 left-0 block w-full h-full project-link-01 bg-slate-300 z-3">
@@ -126,7 +144,7 @@
 					
 				</div>
 
-				<div class="block text-center pt-28 pb-52">
+				<div class="block text-center md:pt-28 md:pb-52">
 					<NuxtLink :to="{ name: 'Projects' }" class="inline-block px-10 py-5 text-black transition-all duration-300 border border-black rounded-full hover:bg-black hover:text-white">
 						View all projects
 					</NuxtLink>

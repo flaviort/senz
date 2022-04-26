@@ -1,6 +1,9 @@
 {
-  "Menus": {
-    "description": "Auto imported from components/Menus.vue"
+  "FsMenu": {
+    "description": "Auto imported from components/FsMenu.vue"
+  },
+  "SideMenu": {
+    "description": "Auto imported from components/SideMenu.vue"
   },
   "ButtonsArrowDown": {
     "description": "Auto imported from components/buttons/ArrowDown.vue"

@@ -83,7 +83,7 @@
 					{ name: 'Contact', link: 'Contact' }
 				]
 			}
-		}
+		},
 	}
 </script>
 

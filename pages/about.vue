@@ -36,6 +36,7 @@
 				title: 'About'
 			}
 		},
+
 		head() {
 			return {
 				title: this.title,
@@ -47,7 +48,7 @@
 					}
 				]
 			}
-		}
+		},
 	}
 </script>
 

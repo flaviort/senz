@@ -6,7 +6,8 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
-- `<Menus>` | `<menus>` (components/Menus.vue)
+- `<FsMenu>` | `<fs-menu>` (components/FsMenu.vue)
+- `<SideMenu>` | `<side-menu>` (components/SideMenu.vue)
 - `<ButtonsArrowDown>` | `<buttons-arrow-down>` (components/buttons/ArrowDown.vue)
 - `<ButtonsCircleArrowRight>` | `<buttons-circle-arrow-right>` (components/buttons/CircleArrowRight.vue)
 - `<ButtonsFollowMouse>` | `<buttons-follow-mouse>` (components/buttons/FollowMouse.vue)

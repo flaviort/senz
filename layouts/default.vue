@@ -1,7 +1,8 @@
 <template>
 	<div>
 		
-		<Menus />
+		<FsMenu ref="fsMenuGlobal" />
+		<SideMenu ref="sideMenuGlobal" />
 		
 		<div class="body-wrapper">
 
