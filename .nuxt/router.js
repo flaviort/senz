@@ -8,6 +8,7 @@ const _0bea9cba = () => interopDefault(import('../pages/about.vue' /* webpackChu
 const _8399aae6 = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
 const _1099d646 = () => interopDefault(import('../pages/projects.vue' /* webpackChunkName: "pages/projects" */))
 const _000adf7e = () => interopDefault(import('../pages/projects/lp-fitness.vue' /* webpackChunkName: "pages/projects/lp-fitness" */))
+const _12e31095 = () => interopDefault(import('../pages/projects/ultra-capital.vue' /* webpackChunkName: "pages/projects/ultra-capital" */))
 const _55af0a7e = () => interopDefault(import('../pages/services.vue' /* webpackChunkName: "pages/services" */))
 const _2ba2777f = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -38,6 +39,10 @@ export const routerOptions = {
       path: "lp-fitness",
       component: _000adf7e,
       name: "LP Fitness"
+    }, {
+      path: "ultra-capital",
+      component: _12e31095,
+      name: "Ultra Capital"
     }]
   }, {
     path: "/services",

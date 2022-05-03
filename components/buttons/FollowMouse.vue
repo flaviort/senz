@@ -102,12 +102,9 @@
 
 		watch: {
 			"$route.path": function() {
-				this.$nextTick(function () {
-					setTimeout(() => {
-						this.followMouse()
-					}, 600)
-					// the timeout should be a little longer than the gsap / page transition itself
-				})
+				setTimeout(() => {
+					this.followMouse()
+				}, 600)
 			}
 		}
 	}

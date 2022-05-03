@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/ultra-capital", {data:[{},{}],fetch:{},mutations:void 0});

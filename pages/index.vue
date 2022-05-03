@@ -1,6 +1,15 @@
 <template>
 	<div>
 
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 463" style="position:absolute;top:-1px;left:-1px;height:0;width:0;" id="svg-distortion">
+			<defs>
+				<filter id="svg-distortion-filter" ref="filter">
+					<feTurbulence ref="turbulence" type="fractalNoise" baseFrequency="0.01 0.003" stitchTiles="noStitch" numOctaves="1" seed="2" result="warp"></feTurbulence>
+					<feDisplacementMap ref="displacement" xChannelSelector="R" yChannelSelector="G" scale="1" in="SourceGraphic" in2="warp"></feDisplacementMap>
+				</filter>
+			</defs>
+		</svg>
+
 		<section class="relative flex items-center justify-start pt-40 pb-28 sm:py-52 md:py-40 md:pl-20">
 
 			<NuxtLink :to="{name: 'Contact'}" class="absolute z-10 hidden px-8 py-3 text-sm text-white transition-all duration-300 border border-white rounded-full md:inline-block top-6 right-6 hover:bg-white hover:text-black link">
@@ -30,7 +39,7 @@
 			</div>
 		</section>
 
-		<section class="relative py-24 text-white md:pl-20 md:py-52" id="projects">
+		<section class="relative pt-24 pb-32 text-white md:pl-20 md:py-52" id="projects">
 			<div class="container-wrapper">
 				
 				<h3 class="mb-20 text-5xl font-bold sm:mb-32 sm:text-6xl lg:text-7xl md:mb-72 projects-title mix-blend-difference">
@@ -42,7 +51,7 @@
 
 					<div class="w-full md:w-1/2 description md:pt-[25vh] relative z-2 text-black">
 
-						<div class="items-center w-full mb-20 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
+						<div class="items-center w-full mb-14 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
 							<div class="project-infos-01">
 
 								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
@@ -66,7 +75,7 @@
 							</div>
 						</div>
 
-						<div class="items-center w-full mb-20 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
+						<div class="items-center w-full mb-14 md:mb-0 md:flex md:h-screen md:w-3/4 xl:w-2/3">
 							<div class="project-infos-02">
 
 								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
@@ -90,7 +99,7 @@
 							</div>
 						</div>
 
-						<div class="md:flex items-center w-full md:h-screen md:w-3/4 xl:w-2/3 md:mb-[20vh] mb-20">
+						<div class="md:flex items-center w-full md:h-screen md:w-3/4 xl:w-2/3 md:mb-[20vh] mb-14 md:mb-20">
 							<div class="project-infos-03">
 
 								<NuxtLink :to="{ name: 'LP Fitness' }" class="block mb-7 md:hidden">
@@ -116,25 +125,27 @@
 
 					</div>
 
-					<div class="hidden md:block project-image h-[90vh] w-1/2 xl:w-5/12 overflow-hidden float-right">
+					<div class="hidden md:block project-image h-[90vh] w-1/2 xl:w-5/12 overflow-hidden float-right" style="filter:url(#svg-distortion-filter)">
 						<div class="relative w-full h-full">
 							
-							<div class="absolute top-0 left-0 block w-full h-full project-link-01 bg-slate-300 z-3">
-								<NuxtLink :to="{ name: 'LP Fitness' }" class="block w-full h-full project-link">
+							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-01 bg-slate-300 z-3">
+								<NuxtLink :to="{ name: 'LP Fitness' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
 									<picture>
 										<img src="~/assets/img/projects/thumb-lp-fitness.jpg" srcset="~/assets/img/projects/thumb-lp-fitness@2x.jpg 2x" alt="LP Fitness" class="object-cover w-full h-full">
 									</picture>
 								</NuxtLink>
 							</div>
 
-							<div class="absolute top-0 left-0 block w-full h-full project-link-02 bg-slate-300 z-2">
-								<NuxtLink :to="{ name: 'Services' }" class="block w-full h-full project-link">
-									bbbbb
+							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-02 bg-slate-300 z-2">
+								<NuxtLink :to="{ name: 'Ultra Capital' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
+									<picture>
+										<img src="~/assets/img/projects/thumb-ultra-capital.jpg" srcset="~/assets/img/projects/thumb-ultra-capital@2x.jpg 2x" alt="LP Fitness" class="object-cover w-full h-full">
+									</picture>
 								</NuxtLink>
 							</div>
 
-							<div class="absolute top-0 left-0 block w-full h-full project-link-03 bg-slate-300 z-1">
-								<NuxtLink :to="{ name: 'Contact' }" class="block w-full h-full project-link">
+							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-03 bg-slate-300 z-1">
+								<NuxtLink :to="{ name: 'Contact' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
 									ccccc
 								</NuxtLink>
 							</div>
@@ -144,9 +155,31 @@
 					
 				</div>
 
-				<div class="block text-center md:pt-28 md:pb-52">
+				<div class="block md:text-center md:pt-28 md:pb-52">
 					<NuxtLink :to="{ name: 'Projects' }" class="inline-block px-10 py-5 text-black transition-all duration-300 border border-black rounded-full hover:bg-black hover:text-white">
 						View all projects
+					</NuxtLink>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="relative pb-32 text-black md:pl-20 md:pb-52" id="about">
+			<div class="container-wrapper">
+
+				<p class="block mb-6 text-base md:mb-10 md:text-lg">
+					<strong>
+						About us
+					</strong>
+				</p>
+
+				<p class="block text-xl !leading-normal md:w-2/3 sm:text-2xl lg:text-4xl">
+					We are a digital service and consulting firm which focuses on catering to the demands of our clients by offering them innovate and quality driven solutions.
+				</p>
+
+				<div class="block pt-10 -ml-1 md:pt-12">
+					<NuxtLink :to="{ name: 'About' }" class="inline-block px-10 py-5 text-black transition-all duration-300 border border-black rounded-full hover:bg-black hover:text-white">
+						Get to know us
 					</NuxtLink>
 				</div>
 
@@ -203,29 +236,56 @@
 
 			projectImagesScroll01() {
 				let tl = this.$gsap.timeline({ paused: true });
-				tl.to('.project-link-01', { autoAlpha: 0, });
+				tl.to('.project-link-01', { y: '-100%' });
 
 				this.$ScrollTrigger.create({
 					trigger: '.project-infos-01',
 					start: 'top top',
-					end: vh(30) + 'top',
+					end: vh(50) + 'top',
 					scrub: true,
 					animation: tl,
+					//onEnter: this.svgDistortion,
+					//onEnterBack: this.svgDistortion,
 				})
 			},
 
 			projectImagesScroll02() {
 				let tl = this.$gsap.timeline({ paused: true });
-				tl.to('.project-link-02', { autoAlpha: 0, });
+				tl.to('.project-link-02', { y: '-100%' });
 
 				this.$ScrollTrigger.create({
 					trigger: '.project-infos-02',
 					start: 'top top',
-					end: vh(30) + 'top',
+					end: vh(50) + 'top',
 					scrub: true,
 					animation: tl,
+					//onEnterBack: this.svgDistortion,
 				})
 			},
+
+			svgDistortion() {
+				const svgFilterTurbulence= this.$refs.turbulence
+				const svgFilterDisplacementMap = this.$refs.displacement
+
+				const tl = this.$gsap.timeline();
+
+				this.$gsap.killTweensOf(svgFilterDisplacementMap);
+
+				tl.set(svgFilterTurbulence, {
+					attr: {seed: this.$gsap.utils.random(2, 150)},
+				}, 0);
+
+				tl.to(svgFilterDisplacementMap, {
+					attr: {scale: this.$gsap.utils.random(1, 130)},
+					duration: 0.2,
+				}, 0);
+
+				tl.to(svgFilterDisplacementMap, {
+					attr: {scale: 1},
+					duration: 3,
+					ease: "expo.out"
+				}, 0.2);
+			}
 		},
 
 		mounted() {
