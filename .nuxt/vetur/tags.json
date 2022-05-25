@@ -11,6 +11,12 @@
   "FooterTwoBlocks": {
     "description": "Auto imported from components/footer/TwoBlocks.vue"
   },
+  "LogosSenzHorizontal": {
+    "description": "Auto imported from components/logos/SenzHorizontal.vue"
+  },
+  "LogosSenzVertical": {
+    "description": "Auto imported from components/logos/SenzVertical.vue"
+  },
   "ButtonsArrowDown": {
     "description": "Auto imported from components/buttons/ArrowDown.vue"
   },
@@ -19,11 +25,5 @@
   },
   "ButtonsFollowMouse": {
     "description": "Auto imported from components/buttons/FollowMouse.vue"
-  },
-  "LogosSenzHorizontal": {
-    "description": "Auto imported from components/logos/SenzHorizontal.vue"
-  },
-  "LogosSenzVertical": {
-    "description": "Auto imported from components/logos/SenzVertical.vue"
   }
 }

@@ -1,15 +1,6 @@
 <template>
 	<div>
 
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 463" style="position:absolute;top:-1px;left:-1px;height:0;width:0;" id="svg-distortion">
-			<defs>
-				<filter id="svg-distortion-filter" ref="filter">
-					<feTurbulence ref="turbulence" type="fractalNoise" baseFrequency="0.01 0.003" stitchTiles="noStitch" numOctaves="1" seed="2" result="warp"></feTurbulence>
-					<feDisplacementMap ref="displacement" xChannelSelector="R" yChannelSelector="G" scale="1" in="SourceGraphic" in2="warp"></feDisplacementMap>
-				</filter>
-			</defs>
-		</svg>
-
 		<section class="relative flex items-center justify-start pt-40 pb-28 sm:py-52 md:py-40 md:pl-20">
 
 			<NuxtLink :to="{name: 'Contact'}" class="absolute z-10 hidden px-8 py-3 text-sm text-white transition-all duration-300 border border-white rounded-full md:inline-block top-6 right-6 hover:bg-white hover:text-black link">
@@ -125,11 +116,11 @@
 
 					</div>
 
-					<div class="hidden md:block project-image h-[90vh] w-1/2 xl:w-5/12 overflow-hidden float-right" style="filter:url(#svg-distortion-filter)">
+					<div class="hidden md:block project-image h-[90vh] w-1/2 xl:w-5/12 overflow-hidden float-right">
 						<div class="relative w-full h-full">
 							
 							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-01 bg-slate-300 z-3">
-								<NuxtLink :to="{ name: 'LP Fitness' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
+								<NuxtLink :to="{ name: 'LP Fitness' }" class="block w-full h-full transition-transform duration-1000 project-link hover:scale-105">
 									<picture>
 										<img src="~/assets/img/projects/thumb-lp-fitness.jpg" srcset="~/assets/img/projects/thumb-lp-fitness@2x.jpg 2x" alt="LP Fitness" class="object-cover w-full h-full">
 									</picture>
@@ -137,7 +128,7 @@
 							</div>
 
 							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-02 bg-slate-300 z-2">
-								<NuxtLink :to="{ name: 'Ultra Capital' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
+								<NuxtLink :to="{ name: 'Ultra Capital' }" class="block w-full h-full transition-transform duration-1000 project-link hover:scale-105">
 									<picture>
 										<img src="~/assets/img/projects/thumb-ultra-capital.jpg" srcset="~/assets/img/projects/thumb-ultra-capital@2x.jpg 2x" alt="LP Fitness" class="object-cover w-full h-full">
 									</picture>
@@ -145,7 +136,7 @@
 							</div>
 
 							<div class="absolute top-0 left-0 block w-full h-full overflow-hidden project-link-03 bg-slate-300 z-1">
-								<NuxtLink :to="{ name: 'Contact' }" class="block w-full h-full transition-all duration-1000 project-link hover:scale-105">
+								<NuxtLink :to="{ name: 'Contact' }" class="block w-full h-full transition-transform duration-1000 project-link hover:scale-105">
 									ccccc
 								</NuxtLink>
 							</div>
@@ -179,7 +170,9 @@
 
 				<div class="block pt-10 -ml-1 md:pt-12">
 					<NuxtLink :to="{ name: 'About' }" class="inline-block px-10 py-5 text-black transition-all duration-300 border border-black rounded-full hover:bg-black hover:text-white">
-						Get to know us
+						<span>
+							Get to know us
+						</span>
 					</NuxtLink>
 				</div>
 
@@ -215,7 +208,7 @@
 				this.$ScrollTrigger.create({
 					trigger: '.projects .project-image',
 					start: vh(-5) + 'top',
-					end: vh(250) + 'top',
+					end: vh(245) + 'top',
 					pin: true,
 				})
     		},
@@ -226,8 +219,8 @@
 
 				this.$ScrollTrigger.create({
 					trigger: '.projects-title',
-					start: '-100 top',
-					end: '200 top',
+					start: '-300 top',
+					end: '300 top',
 					scrub: true,
 					animation: tl,
 					//markers: true,
@@ -236,56 +229,29 @@
 
 			projectImagesScroll01() {
 				let tl = this.$gsap.timeline({ paused: true });
-				tl.to('.project-link-01', { y: '-100%' });
+				tl.to('.project-link-01', { autoAlpha: '0' });
 
 				this.$ScrollTrigger.create({
 					trigger: '.project-infos-01',
 					start: 'top top',
-					end: vh(50) + 'top',
+					end: vh(30) + 'top',
 					scrub: true,
 					animation: tl,
-					//onEnter: this.svgDistortion,
-					//onEnterBack: this.svgDistortion,
 				})
 			},
 
 			projectImagesScroll02() {
 				let tl = this.$gsap.timeline({ paused: true });
-				tl.to('.project-link-02', { y: '-100%' });
+				tl.to('.project-link-02', { autoAlpha: '0' });
 
 				this.$ScrollTrigger.create({
 					trigger: '.project-infos-02',
 					start: 'top top',
-					end: vh(50) + 'top',
+					end: vh(30) + 'top',
 					scrub: true,
 					animation: tl,
-					//onEnterBack: this.svgDistortion,
 				})
 			},
-
-			svgDistortion() {
-				const svgFilterTurbulence= this.$refs.turbulence
-				const svgFilterDisplacementMap = this.$refs.displacement
-
-				const tl = this.$gsap.timeline();
-
-				this.$gsap.killTweensOf(svgFilterDisplacementMap);
-
-				tl.set(svgFilterTurbulence, {
-					attr: {seed: this.$gsap.utils.random(2, 150)},
-				}, 0);
-
-				tl.to(svgFilterDisplacementMap, {
-					attr: {scale: this.$gsap.utils.random(1, 130)},
-					duration: 0.2,
-				}, 0);
-
-				tl.to(svgFilterDisplacementMap, {
-					attr: {scale: 1},
-					duration: 3,
-					ease: "expo.out"
-				}, 0.2);
-			}
 		},
 
 		mounted() {
